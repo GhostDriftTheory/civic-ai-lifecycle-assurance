@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>自治体AI｜派生情報ライフサイクル・アシュアランス</title>
+<style>
+:root{--ink:#163544;--muted:#657b86;--line:#d9e3e7;--bg:#f3f6f7;--green:#08786a;--soft:#e8f5ef;--amber:#946112;--red:#af3c49;--navy:#102f3d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.8 -apple-system,BlinkMacSystemFont,'Yu Gothic UI','Yu Gothic',Meiryo,sans-serif}button,select,input{font:inherit}button,select{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}button:focus-visible,summary:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #62ad9f;outline-offset:3px}h1,h2,h3,p{margin:0}button{color:inherit}header{background:var(--navy);color:white}.wrap{width:min(1320px,calc(100% - 64px));margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:19px 0}.brand{font-size:15px;font-weight:750;letter-spacing:.05em}.brand small{display:block;font-size:9px;color:#a8c3cc;letter-spacing:.13em;font-weight:500}.offline{font-size:11px;color:#c0dadf}.offline:before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:#78cbb1;margin-right:8px}.label{font:10px/1.6 ui-monospace,Consolas,monospace;letter-spacing:.06em;color:var(--muted)}.nav{background:#fff;border-bottom:1px solid var(--line)}.nav .wrap{display:flex;justify-content:space-between;align-items:center}.tabs{display:flex;gap:28px}.tab{border:0;background:transparent;padding:16px 0 13px;font-size:12px;font-weight:750;color:var(--muted);border-bottom:3px solid transparent}.tab[aria-selected=true]{color:var(--green);border-color:var(--green)}.nav-note{font-size:10px;color:var(--muted)}main{padding-bottom:40px}.hero{display:grid;grid-template-columns:1.07fr 1fr;gap:48px;align-items:center;padding:32px 0 24px}.eyebrow{font-size:10px;letter-spacing:.16em;color:var(--green);font-weight:750;margin-bottom:9px}h1{font-size:clamp(27px,2.75vw,38px);line-height:1.5;letter-spacing:.01em}h1 em{font-style:normal;color:var(--green)}.hero p{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.95}.journey{display:flex;gap:13px;align-items:center}.jnode{flex:1;border-top:2px solid #9db6c1;padding-top:14px}.jnode:last-child{border-color:var(--green)}.jnode strong{display:block;font-size:14px;margin-top:3px}.jnode p{font-size:10px;line-height:1.8;margin:6px 0 0}.arrow{color:#95aeb8}.scope{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:12px 16px;color:var(--muted);font-size:11px;margin-bottom:22px}.scope b{color:var(--ink)}.scope .label{white-space:nowrap;font-size:9px}.cap{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0}.cap h2{font-size:13px}.cap .label{font-size:10px}.scenarios{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}.scenario{background:white;border:1px solid var(--line);padding:11px 12px;border-radius:9px;text-align:left;min-height:75px}.scenario .label{display:block;font-size:9px;margin-bottom:2px}.scenario strong{font-size:12px}.scenario[aria-pressed=true]{border-color:var(--green);box-shadow:0 0 0 1px var(--green);background:#f0f9f5}.scenario[aria-pressed=true] .label{color:var(--green)}.more{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:11px 0 19px}.more select{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 9px;color:var(--muted);font-size:11px;max-width:290px}.more p{font-size:11px;color:var(--muted)}.work{display:grid;grid-template-columns:302px minmax(0,1fr);gap:19px;align-items:start}.card{background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden}.card+.card{margin-top:16px}.cardhead{padding:15px 19px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #e5ecef}.cardhead h2{font-size:13px}.pad{padding:17px 19px}.story h2{font-size:17px;line-height:1.65}.story p{font-size:11px;color:var(--muted);margin-top:7px}.progress{height:4px;background:#e8edef;border-radius:5px;margin:14px 0}.progress div{height:4px;background:var(--green);border-radius:5px;transition:width .2s}.steps{padding:0;margin:0;list-style:none;max-height:420px;overflow:auto}.step{display:grid;grid-template-columns:23px minmax(0,1fr) auto;align-items:start;gap:8px;padding:10px 0;border-bottom:1px solid #eaf0f2}.step:last-child{border:0}.step-num{border:1px solid var(--line);border-radius:50%;width:20px;height:20px;text-align:center;font:10px/18px ui-monospace,monospace;color:var(--muted)}.step.done .step-num{background:var(--soft);border-color:#c7e0d6;color:var(--green)}.step.next{background:#f7faf9}.step-name{font-size:11px;font-weight:650}.step-sub{font-size:9px;color:var(--muted)}.badge{display:inline-block;padding:3px 7px;border-radius:5px;font:750 9px/1.6 ui-monospace,monospace;background:#edf1f3;color:#5a7481;white-space:nowrap}.badge.PASS{background:var(--soft);color:var(--green)}.badge.HOLD{background:#fff4df;color:var(--amber)}.badge.REJECT{background:#faecef;color:var(--red)}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.btn{border:1px solid var(--line);border-radius:7px;background:white;padding:9px 12px;font-size:11px;font-weight:700;line-height:1.65;min-height:36px}.btn:hover{background:#f4f8f7}.btn.primary{background:var(--green);color:white;border-color:var(--green)}.btn.primary:hover{background:#086457}.btn.full{width:100%}.btn.subtle{font-size:10px;color:var(--muted);padding:6px 9px}.progress-label{font-size:10px;color:var(--muted);margin-top:10px}.result{border-top:3px solid var(--green)}.result.hold{border-top-color:var(--amber)}.result.reject{border-top-color:var(--red)}.resulthead{padding:17px 21px}.resulthead .label{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}.resulthead h2{font-size:22px;line-height:1.6}.resulthead p{font-size:12px;color:var(--muted);margin-top:8px}.metricrow{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fafcfb}.metric{padding:11px 17px;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric small{display:block;font-size:9px;color:var(--muted)}.metric b{font:600 23px/1.65 ui-monospace,monospace}.metric .unit{font-size:10px;color:var(--muted);margin-left:3px}.checklist{padding:1px 20px}.check{display:grid;grid-template-columns:36px 1fr auto;gap:9px;align-items:center;padding:8px 0;border-bottom:1px solid #edf1f2;font-size:11px}.check:last-child{border:0}.check .label{font-size:9px}.info{padding:11px 15px;border-left:3px solid #9ab7c3;background:#f1f6f8;color:var(--muted);font-size:10px;line-height:1.9;margin:14px 19px}.info.good{background:#edf8f2;border-left-color:var(--green);color:#28685b}.info.warn{background:#fff7e8;border-left-color:#c19b4f}.objects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:15px 18px}.object{border:1px solid var(--line);border-radius:9px;overflow:hidden}.obj-head{padding:10px 12px;display:flex;align-items:center;justify-content:space-between;gap:6px;background:#f6f9fa}.obj-title{font-weight:750;font-size:12px}.obj-body{padding:11px 12px;font-size:10px;line-height:1.85}.origin{font:9px/1.7 ui-monospace,monospace;color:var(--muted);margin-bottom:6px}.term{font-size:10px;padding:3px 0;color:#3c5a68;border-bottom:1px solid #eef2f4}.term:last-child{border:0}.term.changed{color:var(--green);font-weight:750}.term em{font-size:8px;font-style:normal;color:#8a9da7;margin-right:3px}.route{display:flex;justify-content:space-between;gap:5px;margin:9px 0 0;padding-top:7px;border-top:1px dashed var(--line);font-size:9px;color:var(--muted)}.state-badge{font-size:9px;color:var(--muted)}.origin-state{padding:0 19px 13px;font-size:10px;color:var(--muted)}.output-text{font-size:12px;line-height:1.95;white-space:pre-wrap;padding:13px 15px;border-radius:8px;background:#f1f7f4;margin:14px 19px;color:#315f52}.preview{display:flex;gap:7px;padding:0 19px 15px;flex-wrap:wrap;font-size:10px}.preview span{border:1px solid var(--line);border-radius:5px;padding:4px 7px}.two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}.two>.card{margin:0}.intro{padding:27px 0 0}.intro h1{font-size:29px}.intro p{color:var(--muted);font-size:12px;margin-top:8px}.def{display:grid;grid-template-columns:100px 1fr;margin:0;font-size:11px}.def dt,.def dd{margin:0;padding:8px 0;border-bottom:1px solid #e9eef1}.def dt{color:var(--muted)}.def dd{overflow-wrap:anywhere}.json{background:var(--navy);color:#cae0e3;border-radius:8px;padding:16px;font:10px/1.8 ui-monospace,Consolas,monospace;overflow:auto;max-height:390px;margin:15px 0 0}.verify-result{font-size:12px;margin-top:14px;white-space:pre-line;overflow-wrap:anywhere}.smalltext{font-size:11px;color:var(--muted);line-height:2}.scoregrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:23px}.score{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 21px}.score b{display:block;font:600 32px/1.6 ui-monospace,monospace}.score p,.score small{font-size:11px;color:var(--muted)}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:11px;text-align:left}td,th{padding:11px 15px;border-bottom:1px solid #e5ecef;vertical-align:top}th{background:#f5f8fa;font-size:10px;color:var(--muted)}td:nth-child(2){min-width:180px}details{margin-top:14px}summary{cursor:pointer;font-size:11px;font-weight:700}.fatal{display:none;background:#fff1f1;color:var(--red);padding:15px;margin:20px;border-radius:8px}footer{margin-top:27px;padding-top:17px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:10px;line-height:1.9}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;padding:12px 20px;border-radius:9px;font-size:12px;z-index:99;max-width:90%;box-shadow:0 6px 35px #16354433}.key{text-transform:uppercase;font:9px ui-monospace,monospace;color:var(--muted)}[hidden]{display:none!important}@media(max-width:1100px){.work{grid-template-columns:270px 1fr}.objects{grid-template-columns:repeat(2,1fr)}.hero{gap:24px}.journey{gap:8px}.jnode strong{font-size:12px}.scenario strong{font-size:11px}.nav-note{display:none}}@media(max-width:820px){.wrap{width:calc(100% - 34px)}.hero{grid-template-columns:1fr;gap:20px;padding-top:24px}.hero h1{font-size:31px}.journey{max-width:580px}.scope .label{display:none}.scenarios{grid-template-columns:repeat(3,1fr)}.work{grid-template-columns:1fr}.story .steps{max-height:190px}.story .actions{display:grid;grid-template-columns:1fr 1fr}.story .actions .full{grid-column:1/-1}.objects{grid-template-columns:repeat(3,minmax(0,1fr))}.two{grid-template-columns:1fr}.more p{font-size:10px}.scoregrid{gap:10px}.score{padding:15px}.score b{font-size:27px}footer{flex-direction:column;gap:9px}}@media(max-width:520px){.brand{font-size:12px}.brand small{font-size:8px}.offline{font-size:8px;white-space:nowrap;flex-shrink:0}.brand{min-width:0}.brand small{font-size:7px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.top{padding:16px 0;gap:9px}.hero h1{font-size:24px}.hero p{font-size:11px}.hero p br{display:none}.jnode strong{font-size:11px}.jnode .label{font-size:8px}.jnode p{font-size:9px}.scope{font-size:10px;padding:10px 12px}.tabs{gap:22px}.tab{font-size:11px}.scenario{padding:9px 10px;min-height:65px}.scenario strong{font-size:10px}.scenario .label{font-size:8px}.more{align-items:start;flex-direction:column}.more select{width:100%;max-width:none}.resulthead h2{font-size:20px}.metric{padding:9px 10px}.metric b{font-size:20px}.metric small{font-size:8px}.objects{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px}.obj-body{padding:9px}.cardhead{padding:13px 16px}.cardhead h2{font-size:12px}.pad{padding:15px}.scoregrid{grid-template-columns:1fr}.score{display:grid;grid-template-columns:1fr auto;align-items:center}.score b{grid-column:2;grid-row:1/3}.score small{grid-column:1}.cap .label{font-size:9px}.intro h1{font-size:25px}.info{margin:12px;font-size:10px}.preview{padding-inline:12px}.def{grid-template-columns:83px 1fr}.checklist{padding-inline:15px}.check{font-size:10px;grid-template-columns:31px 1fr auto}footer{font-size:9px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}@media print{header,.nav,.scenarios,.more,.actions,.btn,.story,.toast{display:none!important}.wrap{width:100%}.work,.two{display:block}.card{break-inside:avoid;box-shadow:none;margin-top:15px}.hero{display:block}.journey{display:none}.objects{grid-template-columns:repeat(3,1fr)}body{background:white}main{padding:0}}
+</style></head><body>
+<header><div class="wrap top"><div class="brand">AIアシュアランス<small>DERIVED INFORMATION · LIFECYCLE ASSURANCE</small></div><div class="offline">合成データ / 外部通信なし</div></div></header>
+<div class="nav"><div class="wrap"><nav class="tabs" role="tablist" aria-label="デモの表示"><button class="tab" role="tab" id="tab-demo" aria-controls="view-demo" aria-selected="true" data-tab="demo">01　操作デモ</button><button class="tab" role="tab" id="tab-evidence" aria-controls="view-evidence" aria-selected="false" data-tab="evidence">02　証拠と範囲</button><button class="tab" role="tab" id="tab-tests" aria-controls="view-tests" aria-selected="false" data-tab="tests">03　合成テスト</button></nav><span class="nav-note">開発版 · クラウドシエンとの協業検討用（暫定）</span></div></div>
+<noscript>このオフラインデモの操作にはJavaScriptが必要です。</noscript><div class="fatal" id="fatal" role="alert"></div>
+<main class="wrap">
+<section id="view-demo" role="tabpanel" aria-labelledby="tab-demo">
+<div class="hero"><div><div class="eyebrow">PHASE 03 — LIFECYCLE ASSURANCE</div><h1>生成した情報にも、<br><em>使える条件と、終わり方を。</em></h1><p>要約すれば制限が消えるわけではない。削除ボタンだけで利用終了とも言えない。<br>条件の承継、後続利用、残るコピーや未完了処理まで、理由と証拠で確かめます。</p></div><div class="journey"><div class="jnode"><span class="label">01 / INHERIT</span><strong>条件を引き継ぐ</strong><p>要約・コピーにも起源別の制限<br>変更は証拠がある範囲だけ</p></div><span class="arrow">›</span><div class="jnode"><span class="label">02 / CONTROL</span><strong>利用を制御する</strong><p>目的・提供先・期限を照合<br>条件を満たす処理だけ供給</p></div><span class="arrow">›</span><div class="jnode"><span class="label">03 / VERIFY END</span><strong>終了を確かめる</strong><p>残存経路・未終結操作を検査<br>範囲を明示した証拠を残す</p></div></div></div>
+<div class="scope"><span><b>架空の相談情報 × 模擬AI。</b> 利用終了の対象は管理ゲート経由の業務利用です。物理消去やAPI提供者内部の削除は保証しません。</span><span class="label">OFFLINE REFERENCE · v1.0</span></div>
+<div class="cap"><h2>確かめたいシナリオを選ぶ</h2><span class="label">状態を引き継ぎながら一段ずつ実行</span></div><div id="scenarios" class="scenarios"></div>
+<div class="more"><p>まず「条件の承継」→「部分変更」→「残るコピー」の順がおすすめです。</p><select id="scenario-select" aria-label="全シナリオから選択"></select></div>
+<div class="work"><aside class="card story"><div class="pad"><div class="eyebrow" id="story-key">SCENARIO</div><h2 id="story-title"></h2><p id="story-summary"></p><div class="progress"><div id="progress-bar"></div></div><ol class="steps" id="steps"></ol><div class="actions"><button class="btn primary full" id="next">次の処理を実行</button><button class="btn" id="run-all">最後まで実行</button><button class="btn subtle" id="reset">最初から</button></div><div class="progress-label" id="progress-label"></div></div></aside>
+<div><article class="card result" id="result-card"><div class="resulthead"><div class="label"><span id="result-operation">READY / 実行待ち</span><span class="badge" id="result-badge">READY</span></div><h2 id="result-title">生成から利用終了までを検証する</h2><p id="result-reason">左のボタンで、最初の処理を実行してください。</p></div><div class="metricrow"><div class="metric"><small>管理する情報対象</small><b id="m-objects">2</b><span class="unit">件</span></div><div class="metric"><small>O-Aの残存可能経路</small><b id="m-paths">1</b><span class="unit">件</span></div><div class="metric"><small>未終結操作</small><b id="m-pending">0</b><span class="unit">件</span></div><div class="metric"><small>現在の状態版</small><b id="m-version">0</b></div></div><div class="checklist" id="checks"></div><div id="result-extra"></div><div class="actions" style="padding:0 19px 16px"><button class="btn subtle" id="view-proof">現在の証拠を見る</button><button class="btn subtle" id="save" disabled>監査用JSONを保存</button></div></article>
+<article class="card"><div class="cardhead"><h2>派生情報と、現在の利用条件</h2><span class="label">起源別の制限を保持</span></div><div class="objects" id="objects"></div><div class="origin-state" id="origin-state"></div><div class="preview" id="permission-preview"></div></article></div></div>
+</section>
+<section id="view-evidence" role="tabpanel" aria-labelledby="tab-evidence" hidden><div class="intro"><div class="eyebrow">SCOPE · EVIDENCE · REPLAY</div><h1>「何が終わったか」を、範囲付きで残す。</h1><p>保存した記録の結論だけではなく、開始状態と処理履歴から、条件・経路・閉鎖・判定を再計算します。</p></div><div class="two"><article class="card"><div class="cardhead"><h2>今回の検証範囲</h2><span class="label">BOUNDARY</span></div><div class="pad"><dl class="def"><dt>対象</dt><dd>固定の合成情報・要約・コピー・キャッシュと、登録された管理読取り経路</dd><dt>保証する性質</dt><dd>条件の根拠なき脱落を防ぐこと、利用条件による供給制御、不明を不存在としない終了判定</dd><dt>終了水準</dt><dd>指定された管理ゲート経由の業務利用の終了。起源・範囲・状態版・世代・保持例外を記録</dd><dt>保持例外</dt><dd>合成入力・過去の出力・処理履歴を監査用に保持。物理消去とは異なります</dd><dt>範囲外</dt><dd>管理外コピー、実API、OSを含む迂回経路、媒体消去、外部事業者内部の削除、モデルのアンラーニング</dd><dt>形式検証</dt><dd>Leanモデルの定理＋具体的な実装照合。Python全体の形式検証ではありません</dd></dl><div class="info" style="margin-inline:0">承認は固定の模擬権限者によるものです。JSONのハッシュは内容照合用であり、電子署名・時刻認証・本人認証ではありません。</div></div></article><article class="card"><div class="cardhead"><h2>現在の監査記録を再検証</h2><span class="label">INDEPENDENT REPLAY</span></div><div class="pad"><p class="smalltext">JSONを読み込むと、固定参照から履歴を再実行します。選択中のデモ状態は変更しません。過去の記録の再現成立と、現在の証明適用は別です。</p><div class="actions"><button class="btn primary" id="verify-current" disabled>現在の記録を再検証</button><button class="btn" id="load">JSONを読み込む</button><input type="file" id="json-file" accept=".json,application/json" hidden><button class="btn subtle" id="tamper" disabled>改変＋再ハッシュを試す</button></div><div id="verify-result" class="verify-result" aria-live="polite">まだ再検証していません。</div><pre class="json" id="evidence-json" tabindex="0">操作デモで処理を実行すると表示されます。</pre></div></article></div></section>
+<section id="view-tests" role="tabpanel" aria-labelledby="tab-tests" hidden><div class="intro"><div class="eyebrow">SYNTHETIC SEQUENCE TESTS</div><h1>実行して、期待した違いを確認する。</h1><p>通過・保留・不採用、条件変更、コピー残存、遅延結果、範囲欠落、旧証明の再利用までを含む合成試験です。</p></div><div class="scoregrid"><div class="score"><p>期待判定との一致</p><b id="test-steps">—</b><small>未実行 / 実AIの精度ではありません</small></div><div class="score"><p>履歴の再検証成立</p><b id="test-replay">—</b><small>終了不成立の記録も含む</small></div><div class="score"><p>改変記録の拒否</p><b id="test-tamper">—</b><small>ハッシュを作り直しても検出</small></div></div><div class="actions" style="margin:20px 0"><button class="btn primary" id="test-run">全シナリオの合成試験を実行</button></div><article class="card"><div class="cardhead"><h2>検査結果</h2><span class="label" id="test-status">NOT RUN</span></div><div class="scroll"><table><thead><tr><th>シナリオ</th><th>検証する内容</th><th>期待判定</th><th>再検証</th><th>改変検出</th></tr></thead><tbody id="test-body"><tr><td colspan="5">上のボタンで実行してください。</td></tr></tbody></table></div></article><div class="info">この画面はJavaScriptの合成試験です。Pythonとの全結果・状態・記録照合とLean証明検査は <b>python poc.py ci</b> またはGitHub Actionsで実行します。件数を合算してAI精度・事故防止率とは表現しません。</div></section>
+<footer><div><b>自治体AI・派生情報ライフサイクル・アシュアランス — PoC第3弾</b><br>株式会社AIアシュアランス / クラウドシエンとの協業検討用（暫定）。正式な共同事業・実証開始を示すものではありません。</div><div class="label">© 2026 AI Assurance, Inc.<br>OFFLINE · SYNTHETIC · SOURCE-AVAILABLE DEMO</div></footer>
+</main><div class="toast" id="toast" role="status" hidden></div>
+
+<script id="demo-data" type="application/json">{
+  "schema": "civic-lifecycle-cases/1.0",
+  "metadata": {
+    "synthetic_only": true,
+    "stage": "offline-mock",
+    "note": "全て架空。時刻は模擬カウンタ。実API・実住民情報・機密資料を含まない。"
+  },
+  "reference": {
+    "schema": "civic-lifecycle-reference/1.0",
+    "scope": "local-business",
+    "clock": 1,
+    "certificate_ticks": 3,
+    "actors": {
+      "staff": [
+        "use",
+        "derive",
+        "copy",
+        "start_copy"
+      ],
+      "reviewer": [
+        "approve",
+        "amend"
+      ],
+      "operator": [
+        "freeze",
+        "close",
+        "settle",
+        "tick",
+        "inventory_drop",
+        "inventory_restore",
+        "route_restore",
+        "route_unknown",
+        "remote_copy",
+        "mark_unknown"
+      ]
+    },
+    "origins": [
+      "O-A",
+      "O-B"
+    ],
+    "sources": [
+      {
+        "id": "A",
+        "kind": "source",
+        "origins": [
+          "O-A"
+        ],
+        "text": "【架空相談A】子育てと就労の両立について、利用できる相談窓口を知りたい。年代は30代、世帯区分は子育て世帯。",
+        "conditions": [
+          {
+            "origin": "O-A",
+            "kind": "purpose",
+            "value": 1
+          },
+          {
+            "origin": "O-A",
+            "kind": "deadline",
+            "value": 10
+          },
+          {
+            "origin": "O-A",
+            "kind": "audit",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "kind": "source",
+        "origins": [
+          "O-B"
+        ],
+        "text": "【架空業務資料B】子育て相談と就労支援の窓口へ案内する。資料と派生文は庁内の職員確認用に限る。",
+        "conditions": [
+          {
+            "origin": "O-B",
+            "kind": "recipient",
+            "value": 1
+          },
+          {
+            "origin": "O-B",
+            "kind": "audit",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "labels": {
+      "purpose": {
+        "1": "相談案内のみ",
+        "3": "相談案内・承認済み二次利用"
+      },
+      "recipient": {
+        "1": "内部利用のみ"
+      },
+      "deadline": {
+        "10": "模擬時刻10未満"
+      },
+      "audit": {
+        "1": "監査義務を保持"
+      }
+    },
+    "grant_scope": {
+      "origin": "O-A",
+      "kind": "purpose",
+      "from": 1,
+      "to": 3,
+      "purpose": "secondary",
+      "recipient": "internal",
+      "ttl": 3
+    },
+    "capabilities": [
+      "read"
+    ],
+    "provider": {
+      "mode": "mock",
+      "network": false,
+      "model": "fixed-summary-v1"
+    },
+    "retention": "監査用記録・合成入力は保持。証明対象は管理ゲート経由の業務利用のみ。"
+  },
+  "scenarios": [
+    {
+      "key": "inherit",
+      "label": "生成後も条件を引き継ぐ",
+      "summary": "要約から名前や引用が消えても、入力由来の利用条件は消えません。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "consultation",
+          "recipient": "internal"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "secondary",
+          "recipient": "internal"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "consultation",
+          "recipient": "external"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "REJECT",
+        "REJECT"
+      ]
+    },
+    {
+      "key": "partial_change",
+      "label": "一つの条件だけを変更",
+      "summary": "二次利用を認めても、別起源の内部利用制限と監査義務は保持します。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "approve",
+          "actor": "reviewer",
+          "target": "S",
+          "approval": "G1"
+        },
+        {
+          "op": "amend",
+          "actor": "reviewer",
+          "target": "S",
+          "approval": "G1"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "secondary",
+          "recipient": "internal"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "secondary",
+          "recipient": "external"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "A",
+          "purpose": "secondary",
+          "recipient": "internal"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "REJECT",
+        "REJECT"
+      ]
+    },
+    {
+      "key": "missing_proof",
+      "label": "証拠がなければ緩和しない",
+      "summary": "変更証拠の不足を、条件解除や利用許可に読み替えません。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "amend",
+          "actor": "reviewer",
+          "target": "S",
+          "approval": "MISSING"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "secondary",
+          "recipient": "internal"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "consultation",
+          "recipient": "internal"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "HOLD",
+        "REJECT",
+        "PASS"
+      ]
+    },
+    {
+      "key": "binding",
+      "label": "別の出力に証拠を流用しない",
+      "summary": "承認対象と異なるコピーには変更証拠を適用しません。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "approve",
+          "actor": "reviewer",
+          "target": "S",
+          "approval": "G1"
+        },
+        {
+          "op": "copy",
+          "actor": "staff",
+          "source": "S",
+          "target": "C"
+        },
+        {
+          "op": "amend",
+          "actor": "reviewer",
+          "target": "C",
+          "approval": "G1"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "C",
+          "purpose": "secondary",
+          "recipient": "internal"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "REJECT",
+        "REJECT"
+      ]
+    },
+    {
+      "key": "residual_copy",
+      "label": "コピーが残れば終了しない",
+      "summary": "停止ボタンだけでは終了証明を出さず、要約とキャッシュの利用経路も確認します。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "copy",
+          "actor": "staff",
+          "source": "S",
+          "target": "C"
+        },
+        {
+          "op": "freeze",
+          "actor": "operator",
+          "origin": "O-A"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "consultation",
+          "recipient": "internal"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "B",
+          "purpose": "consultation",
+          "recipient": "internal"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "A-read"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "C-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        },
+        {
+          "op": "apply_certificate",
+          "certificate": "T1"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "REJECT",
+        "PASS",
+        "PASS",
+        "PASS",
+        "REJECT",
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "key": "pending",
+      "label": "結果不明を消えた扱いにしない",
+      "summary": "開始済みコピーの結果不明を保持。遅れて判明した出力も閉鎖してから終了します。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "start_copy",
+          "actor": "staff",
+          "source": "S",
+          "target": "D",
+          "operation": "P1"
+        },
+        {
+          "op": "mark_unknown",
+          "actor": "operator",
+          "operation": "P1"
+        },
+        {
+          "op": "freeze",
+          "actor": "operator",
+          "origin": "O-A"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "A-read"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        },
+        {
+          "op": "settle",
+          "actor": "operator",
+          "operation": "P1",
+          "outcome": "completed"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "D-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "HOLD",
+        "PASS",
+        "PASS",
+        "PASS",
+        "HOLD",
+        "PASS",
+        "REJECT",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "key": "inventory",
+      "label": "一覧の欠落を見逃さない",
+      "summary": "実体として管理する経路と登録一覧を照合。未登録を利用不能とはみなしません。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "freeze",
+          "actor": "operator",
+          "origin": "O-A"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "A-read"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "inventory_drop",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        },
+        {
+          "op": "inventory_restore",
+          "actor": "operator"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "HOLD",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "key": "stale",
+      "label": "過去の証明を現在に流用しない",
+      "summary": "終了後に経路が復元されたら、過去の証明は履歴として残しても現在の根拠には使えません。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "freeze",
+          "actor": "operator",
+          "origin": "O-A"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "A-read"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        },
+        {
+          "op": "route_restore",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "apply_certificate",
+          "certificate": "T1"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "REJECT",
+        "REJECT"
+      ]
+    },
+    {
+      "key": "remote",
+      "label": "管理外の終了は未確認のまま",
+      "summary": "ローカル範囲の終了と、外部事業者を含む終了を区別。API内部の消去を保証しません。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "remote_copy",
+          "actor": "operator",
+          "source": "S",
+          "target": "R"
+        },
+        {
+          "op": "freeze",
+          "actor": "operator",
+          "origin": "O-A"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "A-read"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "all-registered",
+          "audit_exception": true,
+          "certificate": "T1"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "HOLD"
+      ]
+    },
+    {
+      "key": "audit",
+      "label": "監査保持を明示する",
+      "summary": "監査用の合成記録が残る以上、保持例外のない完全消去とは表現しません。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "freeze",
+          "actor": "operator",
+          "origin": "O-A"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "A-read"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": false,
+          "certificate": "T1"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "REJECT",
+        "PASS"
+      ]
+    },
+    {
+      "key": "provider_claim",
+      "label": "AI自身に制限を解除させない",
+      "summary": "模擬AIが条件なしと返しても、制御側が元の条件を付けて登録します。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "claims_unrestricted"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "secondary",
+          "recipient": "internal"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "consultation",
+          "recipient": "external"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "REJECT",
+        "REJECT"
+      ]
+    },
+    {
+      "key": "unknown_route",
+      "label": "不明を不存在にしない",
+      "summary": "観測できない読取り環境は、利用終了の根拠にはなりません。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "freeze",
+          "actor": "operator",
+          "origin": "O-A"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "A-read"
+        },
+        {
+          "op": "route_unknown",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        },
+        {
+          "op": "close",
+          "actor": "operator",
+          "path": "S-read"
+        },
+        {
+          "op": "certify",
+          "origin": "O-A",
+          "scope": "local-business",
+          "audit_exception": true,
+          "certificate": "T1"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "HOLD",
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "key": "expired_grant",
+      "label": "期限切れの承認を拒否",
+      "summary": "同じ出力・条件でも、変更証拠の有効期間を過ぎたら緩和しません。",
+      "commands": [
+        {
+          "op": "derive",
+          "actor": "staff",
+          "parents": [
+            "A",
+            "B"
+          ],
+          "target": "S",
+          "support": "unknown",
+          "mode": "normal"
+        },
+        {
+          "op": "approve",
+          "actor": "reviewer",
+          "target": "S",
+          "approval": "G1"
+        },
+        {
+          "op": "tick",
+          "actor": "operator",
+          "time": 4
+        },
+        {
+          "op": "amend",
+          "actor": "reviewer",
+          "target": "S",
+          "approval": "G1"
+        },
+        {
+          "op": "use",
+          "actor": "staff",
+          "target": "S",
+          "purpose": "secondary",
+          "recipient": "internal"
+        }
+      ],
+      "expected": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "REJECT",
+        "REJECT"
+      ]
+    }
+  ]
+}
+</script>
+<script id="lifecycle-engine">
+/* ENGINE BEGIN */
+'use strict';
+const REFERENCE_SHA256='e385c4c4379207b92355a2621f14422e4337e20fe4b2c7ba6f2407245f5a0add';
+const SCHEMA='civic-lifecycle-evidence/1.0';
+const STATUSES=['PASS','HOLD','REJECT'];
+const clone=x=>JSON.parse(JSON.stringify(x));
+const canonical=x=>x===null||typeof x!=='object'?JSON.stringify(x):Array.isArray(x)?'['+x.map(canonical).join(',')+']':'{'+Object.keys(x).sort().map(k=>JSON.stringify(k)+':'+canonical(x[k])).join(',')+'}';
+const requireOK=(b,m)=>{if(!b)throw Error(m);};
+const same=(a,b)=>canonical(a)===canonical(b);
+function tree(x,depth=0){requireOK(depth<=40,'JSON nesting is too deep');if(x===null||typeof x==='boolean')return;if(typeof x==='number'){requireOK(Number.isSafeInteger(x),'Integer outside shared domain');}else if(typeof x==='string'){requireOK(x.length<=100000,'String too long');for(let i=0;i<x.length;i++){const c=x.charCodeAt(i);if(c>=0xD800&&c<=0xDBFF){requireOK(i+1<x.length&&x.charCodeAt(i+1)>=0xDC00&&x.charCodeAt(i+1)<=0xDFFF,'Invalid Unicode');i++;}else requireOK(c<0xDC00||c>0xDFFF,'Invalid Unicode');}}else if(Array.isArray(x)){requireOK(x.length<=20000,'Array too long');x.forEach(v=>tree(v,depth+1));}else if(typeof x==='object'){requireOK(Object.keys(x).length<=20000&&Object.keys(x).every(k=>/^[\x00-\x7f]*$/.test(k)),'ASCII keys required');Object.values(x).forEach(v=>tree(v,depth+1));}else throw Error('Invalid JSON type');}
+// Strict JSON parser: duplicate keys must not be silently overwritten by JSON.parse.
+function parseJSON(text){let i=0;requireOK(text.length<=16*1024*1024,'JSON too large');text=text.replace(/^\ufeff/,'');const ws=()=>{while(i<text.length&&/[ \r\n\t]/.test(text[i]))i++;};function str(){const start=i;requireOK(text[i++]==='"','String required');while(i<text.length){if(text[i]==='\\'){i+=2;continue;}if(text[i++]==='"')return JSON.parse(text.slice(start,i));}throw Error('Unclosed string');}function val(depth){requireOK(depth<=40,'JSON nesting too deep');ws();let v;if(text[i]==='{'){i++;v=Object.create(null);ws();if(text[i]==='}'){i++;return v;}while(true){ws();let k=str();requireOK(!Object.hasOwn(v,k),'Duplicate JSON key');ws();requireOK(text[i++]===':','Colon required');v[k]=val(depth+1);ws();let t=text[i++];if(t==='}')return v;requireOK(t===',','Comma required');}}if(text[i]==='['){i++;v=[];ws();if(text[i]===']'){i++;return v;}while(true){v.push(val(depth+1));ws();let t=text[i++];if(t===']')return v;requireOK(t===',','Comma required');}}if(text[i]==='"')return str();for(const [token,x] of [['true',true],['false',false],['null',null]])if(text.startsWith(token,i)){i+=token.length;return x;}let m=text.slice(i).match(/^-?(?:0|[1-9]\d*)/);requireOK(m,'Invalid JSON value');i+=m[0].length;return Number(m[0]);}const x=val(0);ws();requireOK(i===text.length,'Trailing data or noninteger');tree(x);return x;}
+function sha256Fallback(str) {
+ const bytes=new TextEncoder().encode(str), bitLength=bytes.length*8;
+ const len=Math.ceil((bytes.length+9)/64)*64, msg=new Uint8Array(len); msg.set(bytes); msg[bytes.length]=128;
+ const dv=new DataView(msg.buffer); dv.setUint32(len-8,Math.floor(bitLength/4294967296));dv.setUint32(len-4,bitLength>>>0);
+ const K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+ let H=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];const W=new Uint32Array(64),R=(x,n)=>(x>>>n)|(x<<(32-n));
+ for(let off=0;off<len;off+=64){for(let i=0;i<16;i++)W[i]=dv.getUint32(off+i*4);for(let i=16;i<64;i++){let s0=R(W[i-15],7)^R(W[i-15],18)^(W[i-15]>>>3),s1=R(W[i-2],17)^R(W[i-2],19)^(W[i-2]>>>10);W[i]=(W[i-16]+s0+W[i-7]+s1)>>>0;}let [a,b,c,d,e,f,g,h]=H;for(let i=0;i<64;i++){let S1=R(e,6)^R(e,11)^R(e,25),ch=(e&f)^(~e&g),t1=(h+S1+ch+K[i]+W[i])>>>0,S0=R(a,2)^R(a,13)^R(a,22),maj=(a&b)^(a&c)^(b&c),t2=(S0+maj)>>>0;h=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;}H=H.map((v,i)=>(v+[a,b,c,d,e,f,g,h][i])>>>0);}
+ return H.map(v=>v.toString(16).padStart(8,'0')).join('');
+}
+
+
+const digest=x=>sha256Fallback(canonical(x));
+const worst=xs=>xs.includes('REJECT')?'REJECT':xs.includes('HOLD')?'HOLD':'PASS';
+const checked=b=>b?'PASS':'REJECT';
+const supported=(known,ok)=>known?checked(ok):'HOLD';
+const certain=p=>p.enabled===1&&p.reader===1;
+const possible=p=>p.enabled!==0&&p.reader!==0;
+const routeUse=ps=>ps.some(certain)?'PASS':ps.some(possible)?'HOLD':'REJECT';
+const routeEnd=p=>!possible(p)?'PASS':certain(p)?'REJECT':'HOLD';
+function useChecks(o){return [checked(o.present),supported(o.inventoryKnown,o.inventoryOK),supported(o.authorityKnown,o.authorityOK),supported(o.conditionsKnown,o.purposeOK),checked(o.recipientOK),checked(o.deadlineOK),checked(o.active),routeUse(o.paths)];}
+function grantChecks(o){return [supported(o.proofPresent,o.authorityOK),supported(o.proofPresent,o.targetOK),supported(o.proofPresent,o.beforeOK),supported(o.proofPresent,o.contextOK),supported(o.proofPresent,o.timeOK),supported(o.proofPresent,o.unused)];}
+function terminationChecks(o){return [supported(o.inventoryKnown,o.inventoryOK),checked(o.frozen),worst(o.paths.map(routeEnd)),supported(o.pending===0&&o.unknown===0,true),supported(o.closureKnown,o.closureOK),checked(!o.retainedBody||o.auditException)];}
+function certificateCurrent(o){return o.historicalOK&&o.sameState&&o.sameScope&&o.withinTime&&o.savedVersion===o.liveVersion&&o.savedEpoch===o.liveEpoch&&worst(terminationChecks(o.termination))==='PASS';}
+const uniqueTerms=ts=>[...new Set(ts.map(canonical))].sort().map(x=>JSON.parse(x));
+const COMMAND_KEYS={derive:['op','actor','parents','target','support','mode'],copy:['op','actor','source','target'],use:['op','actor','target','purpose','recipient'],approve:['op','actor','target','approval'],amend:['op','actor','target','approval'],freeze:['op','actor','origin'],close:['op','actor','path'],start_copy:['op','actor','source','target','operation'],mark_unknown:['op','actor','operation'],settle:['op','actor','operation','outcome'],certify:['op','origin','scope','audit_exception','certificate'],apply_certificate:['op','certificate'],tick:['op','actor','time'],inventory_drop:['op','actor','path'],inventory_restore:['op','actor'],route_restore:['op','actor','path'],route_unknown:['op','actor','path'],remote_copy:['op','actor','source','target']};
+const USE_LABELS=['対象の存在','登録一覧との対応','操作権限','起源別の利用目的','送信先・提供先','利用期限','起源の終了状態','実際の管理経路'];
+const GRANT_LABELS=['変更権限の証拠','出力・派生イベントとの結合','変更前の条件・版との結合','条件要素・利用文脈','証拠の有効期間','証拠の未使用性'];
+const END_LABELS=['対象範囲・登録の完全性','終了バリアの設定','コピー等の残存利用経路','予約中・結果不明の操作','閉鎖処理と状態差分の証拠','監査保持例外の明示'];
+class Engine{
+ constructor(data){tree(data);requireOK(same(Object.keys(data).sort(),['metadata','reference','scenarios','schema']),'Invalid cases file');requireOK(data.schema==='civic-lifecycle-cases/1.0','Unknown cases schema');requireOK(digest(data.reference)===REFERENCE_SHA256,'Fixed reference mismatch');this.data=clone(data);this.ref=this.data.reference;requireOK(data.scenarios.length>0&&data.scenarios.length<=100,'Invalid scenario count');const seen=new Set();for(const sc of data.scenarios){requireOK(same(Object.keys(sc).sort(),['commands','expected','key','label','summary'])&&!seen.has(sc.key),'Invalid scenario');requireOK(sc.commands.length===sc.expected.length&&sc.commands.length>0&&sc.commands.length<=100,'Invalid sequence');requireOK(sc.expected.every(x=>STATUSES.includes(x)),'Invalid expected status');seen.add(sc.key);sc.commands.forEach(c=>this.validateCommand(c));}}
+ initial(){const s={version:0,clock:this.ref.clock,epochs:Object.fromEntries(this.ref.origins.map(o=>[o,0])),frozen:[],objects:{},paths:{},inventory:[],operations:{},approvals:{},receipts:[],certificates:{}};for(const src of this.ref.sources)this.register(s,src.id,[],src.origins,src.conditions,src.text,'source','local','initial');return s;}
+ register(s,target,parents,origins,terms,text,kind,domain,event){requireOK(!Object.hasOwn(s.objects,target),'Object already exists');s.objects[target]={id:target,parents:[...parents],origins:[...new Set(origins)].sort(),conditions:uniqueTerms(terms),text,kind,domain,revision:1,event};const pid=target+'-read';s.paths[pid]={id:pid,object:target,domain,enabled:1,reader:domain==='local'?1:2,generation:0};s.inventory=[...s.inventory,pid].sort();}
+ snapshot(s){return Object.fromEntries(Object.entries(s).filter(([k])=>!['certificates','clock'].includes(k)));}
+ validateCommand(c){tree(c);requireOK(c&&typeof c==='object'&&!Array.isArray(c)&&Object.hasOwn(COMMAND_KEYS,c.op),'Unknown operation');requireOK(same(Object.keys(c).sort(),[...COMMAND_KEYS[c.op]].sort()),'Missing or extra fields');for(const [k,v] of Object.entries(c)){if(k==='parents'){requireOK(Array.isArray(v)&&v.length>0&&v.length<=8&&new Set(v).size===v.length&&v.every(z=>typeof z==='string'&&/^[A-Z][A-Z0-9_-]{0,31}$/.test(z)),'Invalid parents');}else if(k==='audit_exception'){requireOK(typeof v==='boolean','audit_exception must be Boolean');}else if(k==='time'){requireOK(Number.isInteger(v)&&v>=0&&v<=1000,'Invalid simulation time');}else requireOK(typeof v==='string'&&v.length>0&&v.length<=80&&/^[\x00-\x7f]*$/.test(v),'Invalid string');}for(const k of ['target','source','approval','operation','certificate'])if(k in c)requireOK(/^[A-Z][A-Z0-9_-]{0,31}$/.test(c[k]),'Invalid identifier');if('origin'in c)requireOK(this.ref.origins.includes(c.origin),'Unknown origin');if('path'in c)requireOK(/^[A-Z][A-Z0-9_-]{0,31}-read$/.test(c.path),'Invalid path');for(const [k,vs] of Object.entries({scope:['local-business','all-registered'],support:['known','unknown'],mode:['normal','claims_unrestricted'],outcome:['completed','cancelled','unknown'],purpose:['consultation','secondary'],recipient:['internal','external']}))if(k in c)requireOK(vs.includes(c[k]),'Invalid '+k);}
+ useObservation(s,target,actor='staff',purpose='consultation',recipient='internal'){const obj=s.objects[target],terms=obj?obj.conditions:[],paths=Object.values(s.paths).filter(p=>p.object===target&&p.domain==='local'),required=obj&&obj.domain==='local'?[target+'-read']:[],observed=s.inventory.filter(pid=>s.paths[pid]&&s.paths[pid].object===target&&s.paths[pid].domain==='local').sort(),bit=purpose==='consultation'?1:2;return {present:!!obj,inventoryKnown:same(required,observed)&&same(required,paths.map(p=>p.id).sort()),inventoryOK:same(required,observed)&&same(required,paths.map(p=>p.id).sort()),authorityKnown:actor!=='unknown',authorityOK:Object.hasOwn(this.ref.actors,actor)&&this.ref.actors[actor].includes('use'),conditionsKnown:!!obj,purposeOK:terms.filter(t=>t.kind==='purpose').every(t=>(t.value&bit)!==0),recipientOK:terms.filter(t=>t.kind==='recipient'&&t.value===1).every(()=>recipient==='internal'),deadlineOK:terms.filter(t=>t.kind==='deadline').every(t=>s.clock<t.value),active:!!obj&&!obj.origins.some(o=>s.frozen.includes(o)),paths:paths.map(p=>({enabled:p.enabled,reader:p.reader}))};}
+ grantObservation(s,c){const p=s.approvals[c.approval],obj=s.objects[c.target],present=!!p;return {proofPresent:present,authorityOK:present&&p.issuer==='reviewer',targetOK:present&&!!obj&&p.target===c.target&&p.event===obj.event&&p.content===digest(obj.text),beforeOK:present&&!!obj&&p.revision===obj.revision&&p.conditions===digest(obj.conditions),contextOK:present&&same(p.change,this.ref.grant_scope)&&!!obj&&obj.kind!=='source'&&!obj.origins.some(z=>s.frozen.includes(z)),timeOK:present&&p.issued<=s.clock&&s.clock<p.expires,unused:present&&!p.used};}
+ endObservation(s,origin,scope,audit){const selected=Object.values(s.paths).filter(p=>s.objects[p.object].origins.includes(origin)&&(scope==='all-registered'||p.domain==='local')),needed=selected.map(p=>p.id).sort(),observed=s.inventory.filter(pid=>s.paths[pid]&&s.objects[s.paths[pid].object].origins.includes(origin)&&(scope==='all-registered'||s.paths[pid].domain==='local')).sort();const expected=Object.values(s.objects).filter(obj=>obj.origins.includes(origin)&&(scope==='all-registered'||obj.domain==='local')).map(obj=>obj.id+'-read').sort();const complete=same(needed,observed)&&same(needed,expected)&&s.inventory.length===new Set(s.inventory).size&&s.inventory.every(pid=>!!s.paths[pid]),ops=Object.values(s.operations).filter(o=>o.origins.includes(origin));let receiptOK=true;for(const p of selected)if(!possible(p)){const matches=s.receipts.filter(r=>r.path===p.id&&r.after.id===p.id&&r.after.object===p.object&&r.after.domain===p.domain&&r.after.generation===p.generation&&r.after.enabled===0&&r.before.enabled!==0&&r.version<=s.version);if(!matches.length)receiptOK=false;}return {inventoryKnown:complete,inventoryOK:complete,frozen:s.frozen.includes(origin),paths:selected.map(p=>({enabled:p.enabled,reader:p.reader})),pending:ops.filter(o=>o.status==='pending').length,unknown:ops.filter(o=>o.status==='unknown').length,closureKnown:receiptOK,closureOK:receiptOK,retainedBody:true,auditException:audit};}
+ apply(original,c){this.validateCommand(c);const s=clone(original),op=c.op,before=s.version;let changed=false;const r={operation:op,status:'PASS',reason:'処理を完了しました。',checks:[],observation:null,released:null,certificate:null,mutation:false,before_version:before,after_version:before};const decide=(vs,labels,o,model)=>{r.checks=vs.map((v,i)=>({id:model+String(i+1).padStart(2,'0'),label:labels[i],status:v}));r.observation={model,input:o};r.status=worst(vs);};const deny=(v,reason)=>{r.status=v;r.reason=reason;};if('actor'in c&&op!=='use'&&(!Object.hasOwn(this.ref.actors,c.actor)||!this.ref.actors[c.actor].includes(op))){deny(c.actor==='unknown'?'HOLD':'REJECT','必要な操作権限が確認できません。');return [s,r];}
+ if(op==='use'){const o=this.useObservation(s,c.target,c.actor,c.purpose,c.recipient);decide(useChecks(o),USE_LABELS,o,'U');r.reason=r.status==='PASS'?'指定した目的・提供先で職員確認用の情報を供給しました。':'条件を満たさないため、情報本体は供給しません。';if(r.status==='PASS')r.released={object:c.target,text:s.objects[c.target].text,purpose:c.purpose,recipient:c.recipient};}
+ else if(['derive','copy','start_copy'].includes(op)){const parents=op==='derive'?c.parents:[c.source],observations=parents.map(p=>this.useObservation(s,p,c.actor)),checks=observations.map(o=>worst(useChecks(o)));r.checks=parents.map((p,i)=>({id:'INPUT-'+p,label:'入力 '+p+' の利用条件',status:checks[i]}));r.status=worst(checks);if(s.objects[c.target]||Object.values(s.operations).some(o=>o.target===c.target&&['pending','unknown'].includes(o.status)))deny('REJECT','出力識別子が既に使用・予約されています。');if(op==='start_copy'&&s.operations[c.operation])deny('REJECT','操作識別子の再利用は認めません。');if(r.status==='PASS'){const inputs=parents.map(p=>s.objects[p]),terms=uniqueTerms(inputs.flatMap(x=>x.conditions)),origins=[...new Set(inputs.flatMap(x=>x.origins))].sort(),event='derive-'+(before+1);let text;if(op==='derive'){const request={request_id:event,input_objects:parents,input_digests:inputs.map(x=>digest(x.text)),texts:inputs.map(x=>x.text),mode:c.mode};const response={request_id:event,provider:'mock',outcome:'completed',text:'【架空・職員確認用】子育てと就労に関する相談です。子育て相談窓口と就労支援窓口への案内を検討してください。制度の適用・受給は別途確認します。',claimed_conditions:c.mode==='claims_unrestricted'?[]:null};text=response.text;r.provider_receipt={request_digest:digest(request),response_digest:digest(response),provider:'mock',policy_from_provider_accepted:false};}else text=inputs[0].text;if(op==='start_copy'){s.operations[c.operation]={target:c.target,parents,origins,conditions:terms,text,status:'pending',started_version:before,event};r.reason='実行意図と入力・条件を予約記録に保存しました。未終結操作として追跡します。';}else{this.register(s,c.target,parents,origins,terms,text,op==='derive'?'summary':'copy','local',event);r.reason='出力本体・起源・承継条件・利用経路を同じ状態更新で登録しました。';}changed=true;}else r.reason='入力利用または出力登録の条件を満たさないため、派生処理を実行しません。';}
+ else if(op==='approve'){const obj=s.objects[c.target],g=this.ref.grant_scope;if(!obj||obj.kind==='source'||!obj.conditions.some(t=>same(t,{origin:g.origin,kind:g.kind,value:g.from})))deny('REJECT','変更対象の派生情報・条件が一致しません。');else if(s.approvals[c.approval])deny('REJECT','承認識別子は再使用できません。');else if(obj.origins.some(o=>s.frozen.includes(o)))deny('REJECT','終了処理中の起源の条件は緩和しません。');else{s.approvals[c.approval]={issuer:'reviewer',target:c.target,event:obj.event,revision:obj.revision,content:digest(obj.text),conditions:digest(obj.conditions),change:clone(g),issued:s.clock,expires:s.clock+g.ttl,used:false};changed=true;r.reason='模擬権限者の変更証拠を、対象・版・内容・変更前条件に結合しました。';}}
+ else if(op==='amend'){const o=this.grantObservation(s,c);decide(grantChecks(o),GRANT_LABELS,o,'G');const obj=s.objects[c.target];if(obj&&obj.origins.some(z=>s.frozen.includes(z)))deny('REJECT','終了処理中の起源の条件は緩和しません。');if(r.status==='PASS'){const g=this.ref.grant_scope,old={origin:g.origin,kind:g.kind,value:g.from};obj.conditions=obj.conditions.map(t=>same(t,old)?{...t,value:g.to}:t);obj.revision++;s.approvals[c.approval].used=true;changed=true;r.reason='対象出力の目的条件だけを変更。他の条件・別起源・元情報は変更していません。';}else r.reason='有効な変更証拠を確認できないため、元の条件をそのまま保持します。';}
+ else if(op==='freeze'){if(!s.frozen.includes(c.origin)){s.frozen=[...s.frozen,c.origin].sort();s.epochs[c.origin]++;changed=true;}r.reason='当該起源の新規利用を停止しました。これだけでは既存経路の終了とは認めません。';}
+ else if(['close','route_restore','route_unknown','inventory_drop'].includes(op)){const p=s.paths[c.path];if(!p)deny('REJECT','指定された経路は管理実体に存在しません。');else if(op==='close'){if(p.domain!=='local')deny('HOLD','管理外の閉鎖結果を観測できないため、終了とは扱いません。');else if(!s.objects[p.object].origins.some(z=>s.frozen.includes(z)))deny('REJECT','先に対象起源の終了処理を開始してください。');else if(p.enabled===0)r.reason='既に閉鎖済みです。閉鎖証拠を二重計上しません。';else{const previous=clone(p);p.enabled=0;s.receipts.push({path:p.id,before:previous,after:clone(p),version:before+1,method:'managed-route-disable'});changed=true;r.reason='管理ストアの読取り経路を無効化し、実際の前後状態を閉鎖記録に保存しました。';}}else if(op==='inventory_drop'){s.inventory=s.inventory.filter(v=>v!==p.id);changed=true;r.reason='試験用に登録一覧だけを欠落させました。実体の経路は残ります。';}else if(op==='route_restore'){p.enabled=1;p.reader=1;p.generation++;changed=true;r.reason='試験用に経路を復元しました。旧証明の現在適用を再評価してください。';}else{p.reader=2;changed=true;r.reason='試験用に読取り環境を不明にしました。不明は閉鎖の証拠ではありません。';}}
+ else if(op==='inventory_restore'){s.inventory=Object.keys(s.paths).sort();changed=true;r.reason='管理ストアの実体から登録一覧を再構成しました。';}
+ else if(['mark_unknown','settle'].includes(op)){const p=s.operations[c.operation];if(!p)deny('REJECT','開始記録のない操作は精算できません。');else if(!['pending','unknown'].includes(p.status)){if(op==='settle'&&p.status===c.outcome)r.reason='同じ確定結果の再送です。出力や作用を増やしません。';else deny('REJECT','確定済み結果を別の結果や未終結状態へ戻しません。');}else if(op==='mark_unknown'||c.outcome==='unknown'){changed=p.status!=='unknown';p.status='unknown';deny('HOLD','結果不明を保持しました。非実行・終了には読み替えません。');}else{if(c.outcome==='completed')this.register(s,p.target,p.parents,p.origins,p.conditions,p.text,'late-copy','local',p.event);p.status=c.outcome;changed=true;r.reason=c.outcome==='completed'?'模擬結果を照合しました。遅れて判明した出力も起源・条件・経路とともに登録します。':'模擬実行器の非実行確定を受け、予約を終結しました。';}}
+ else if(op==='remote_copy'){const obj=s.objects[c.source];if(!obj||s.objects[c.target])deny('REJECT','対象が存在しないか識別子が重複しています。');else{this.register(s,c.target,[c.source],obj.origins,obj.conditions,obj.text,'external-fixture','remote','remote-fixture-'+(before+1));changed=true;r.reason='試験用の管理外コピーを登録しました。実送信はせず、外部の利用終了は未確認です。';}}
+ else if(op==='tick'){requireOK(c.time>=s.clock,'The simulation clock cannot be rolled back');changed=c.time!==s.clock;s.clock=c.time;r.reason='模擬時刻を更新しました。期限と証明の現在性を再評価します。';}
+ else if(op==='certify'){const o=this.endObservation(s,c.origin,c.scope,c.audit_exception);decide(terminationChecks(o),END_LABELS,o,'E');if(r.status==='PASS'){const excluded=Object.values(s.paths).filter(p=>s.objects[p.object].origins.includes(c.origin)&&p.domain==='remote'&&c.scope==='local-business').map(p=>p.id).sort();const cert={schema:'scoped-use-end/1.0',origin:c.origin,scope:c.scope,operations:['managed_read'],state_version:s.version,epoch:s.epochs[c.origin],state_hash:digest(this.snapshot(s)),reference_hash:REFERENCE_SHA256,issued:s.clock,expires:s.clock+this.ref.certificate_ticks,retention_exception:'synthetic-audit-only',excluded_routes:excluded,physical_erasure:false,provider_internal_deletion:false};s.certificates[c.certificate]=cert;r.certificate=cert;r.reason='指定した管理範囲の業務利用終了を確認しました。監査保持と範囲外を明示した証拠を生成しました。';}else r.reason='残存経路・不明事項・未終結操作等があるため、利用終了の証明は生成しません。';}
+ else if(op==='apply_certificate'){const cert=s.certificates[c.certificate];if(!cert)deny('HOLD','利用終了証明がありません。');else{const e=this.endObservation(s,cert.origin,cert.scope,true);const o={historicalOK:cert.reference_hash===REFERENCE_SHA256,sameState:cert.state_hash===digest(this.snapshot(s)),sameScope:['local-business','all-registered'].includes(cert.scope),withinTime:cert.issued<=s.clock&&s.clock<cert.expires,savedVersion:cert.state_version,liveVersion:s.version,savedEpoch:cert.epoch,liveEpoch:s.epochs[cert.origin],termination:e};r.observation={model:'C',input:o};r.status=checked(certificateCurrent(o));r.reason=r.status==='PASS'?'証明の対象状態と現在状態の一致を確認しました。読取り再開の許可ではありません。':'状態・世代・期限・終了条件が一致しないため、旧証明を現在の根拠に使用しません。';}}
+ if(changed&&op!=='tick')s.version++;r.mutation=changed;r.after_version=s.version;return [s,r];}
+ runCommands(commands,label='custom'){requireOK(commands.length>0&&commands.length<=1000,'Invalid sequence length');let state=this.initial(),events=[],previous=digest({reference:REFERENCE_SHA256,initial:state});for(let i=0;i<commands.length;i++){const command=commands[i],before=digest(this.snapshot(state));let result;[state,result]=this.apply(state,command);const event={sequence:i+1,previous,command:clone(command),before_state:before,after_state:digest(this.snapshot(state)),result};previous=digest(event);events.push({body:event,sha256:previous});}const payload={schema:SCHEMA,reference_hash:REFERENCE_SHA256,label,events,final_state:state,scope_note:this.ref.retention,network_calls:0,provider:'mock'};return {payload,sha256:digest(payload)};}
+ verify(bundle){tree(bundle);requireOK(same(Object.keys(bundle).sort(),['payload','sha256']),'Invalid evidence envelope');const p=bundle.payload;requireOK(p.schema===SCHEMA&&Array.isArray(p.events)&&p.events.length>0&&p.events.length<=1000,'Invalid evidence schema or events');requireOK(typeof p.label==='string'&&p.label.length<=200,'Invalid evidence label');const expected=this.runCommands(p.events.map(e=>e.body.command),p.label);return {ok:same(bundle,expected),replay_events:p.events.length,historical_only:true,note:'固定参照と実行意図から再計算。署名・外部時刻・第三者の現在状態の認証ではありません。'};}
+}
+globalThis.Lifecycle={Engine,canonical,digest,parseJSON,tree,worst,useChecks,grantChecks,terminationChecks,certificateCurrent,possible,certain,routeEnd,routeUse,uniqueTerms};
+/* ENGINE END */
+
+</script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const escapeHTML=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const badge=s=>`<span class="badge ${s}">${s}</span>`;
+let E,selected='inherit',count=0,bundle=null,state=null,timer;
+const shortNames={inherit:'条件の承継',partial_change:'部分変更',residual_copy:'残るコピー',pending:'結果不明',stale:'旧証明の再利用',remote:'管理外との区別'};
+const opLabel=c=>({derive:'模擬AIで要約を生成',copy:'コピー '+c.target+' を生成',use:(c.purpose==='secondary'?'二次利用':'相談案内')+' / '+(c.recipient==='external'?'外部':'内部')+'で利用',approve:'変更証拠を発行',amend:'目的条件の変更を申請',freeze:c.origin+' の終了処理を開始',close:c.path+' を閉鎖',start_copy:'コピー処理を予約',mark_unknown:'実行結果を不明として保持',settle:'開始済み処理の結果を照合',certify:'利用終了を検証',apply_certificate:'終了証明を現在に適用',tick:'模擬時刻を進める',inventory_drop:'試験：登録一覧を欠落',inventory_restore:'実体から一覧を回復',route_restore:'試験：経路を復元',route_unknown:'試験：経路を不明にする',remote_copy:'試験：管理外コピーを登録'}[c.op]||c.op);
+function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(timer);timer=setTimeout(()=>$('toast').hidden=true,3800);}
+function error(e){$('fatal').textContent='処理に失敗しました：'+e.message;$('fatal').style.display='block';}
+function currentScenario(){return E.data.scenarios.find(s=>s.key===selected);}
+function view(name){for(const b of document.querySelectorAll('[data-tab]')){const yes=b.dataset.tab===name;b.setAttribute('aria-selected',String(yes));b.tabIndex=yes?0:-1;}for(const t of ['demo','evidence','tests'])$('view-'+t).hidden=t!==name;}
+function selectScenario(key){selected=key;count=0;bundle=null;state=E.initial();$('verify-result').textContent='まだ再検証していません。';render();}
+function next(all=false){try{const sc=currentScenario();count=all?sc.commands.length:Math.min(count+1,sc.commands.length);bundle=E.runCommands(sc.commands.slice(0,count),sc.label);state=bundle.payload.final_state;render();}catch(e){error(e);}}
+function render(){const sc=currentScenario();$('scenarios').innerHTML=Object.entries(shortNames).map(([key,label],i)=>`<button class="scenario" data-scenario="${key}" aria-pressed="${selected===key}"><span class="label">SCENARIO ${String(i+1).padStart(2,'0')}</span><strong>${label}</strong></button>`).join('');$('scenario-select').value=selected;$('story-key').textContent='SCENARIO / '+selected.toUpperCase();$('story-title').textContent=sc.label;$('story-summary').textContent=sc.summary;$('progress-bar').style.width=(100*count/sc.commands.length)+'%';$('progress-label').textContent=`${count} / ${sc.commands.length} 処理を実行 · 模擬時刻 ${state.clock}`;
+const ev=bundle?.payload.events||[];$('steps').innerHTML=sc.commands.map((c,i)=>`<li class="step ${i<count?'done':i===count?'next':''}"><span class="step-num">${i+1}</span><div><div class="step-name">${escapeHTML(opLabel(c))}</div><div class="step-sub">${escapeHTML(c.target||c.path||c.origin||c.operation||c.certificate||'')}</div></div>${i<count?badge(ev[i].body.result.status):''}</li>`).join('');const stepList=$('steps'),activeStep=stepList.children[Math.min(count,sc.commands.length-1)];if(activeStep&&stepList.firstElementChild)stepList.scrollTop=Math.max(0,activeStep.offsetTop-stepList.firstElementChild.offsetTop-stepList.clientHeight+activeStep.clientHeight+16);$('next').disabled=count===sc.commands.length;$('run-all').disabled=count===sc.commands.length;$('next').textContent=count<sc.commands.length?'次：'+opLabel(sc.commands[count]):'全処理を実行済み';
+for(const id of ['save','verify-current','tamper'])$(id).disabled=!bundle;
+$('m-objects').textContent=Object.keys(state.objects).length;$('m-paths').textContent=Object.values(state.paths).filter(p=>p.domain==='local'&&state.objects[p.object].origins.includes('O-A')&&Lifecycle.possible(p)).length;$('m-pending').textContent=Object.values(state.operations).filter(p=>['pending','unknown'].includes(p.status)).length;$('m-version').textContent=state.version;
+const r=ev.length?ev[ev.length-1].body.result:null;
+$('result-card').className='card result'+(r?.status==='HOLD'?' hold':r?.status==='REJECT'?' reject':'');$('result-operation').textContent=r?'STEP '+count+' / '+r.operation.toUpperCase()+' / '+(sc.commands[count-1].target||sc.commands[count-1].path||sc.commands[count-1].origin||''):'READY / 実行待ち';$('result-badge').className='badge '+(r?.status||'');$('result-badge').textContent=r?.status||'READY';
+let title='生成から利用終了までを検証する';if(r){title=r.status==='HOLD'?'未確認のため、保留します':r.status==='REJECT'?'この条件では認めません':r.operation==='certify'?'指定範囲の利用終了を確認':r.operation==='amend'?'目的条件だけを変更しました':r.operation==='use'?'指定用途の情報を供給しました':r.operation==='freeze'?'新規利用を停止。終了は未確定':r.operation==='apply_certificate'?'現在の状態でも適用可能':opLabel(sc.commands[count-1])+'：完了';}$('result-title').textContent=title;$('result-reason').textContent=r?.reason||'左のボタンで、最初の処理を実行してください。';$('checks').innerHTML=r?r.checks.map(c=>`<div class="check"><span class="label">${escapeHTML(c.id)}</span><span>${escapeHTML(c.label)}</span>${badge(c.status)}</div>`).join(''):'';
+let extra='';if(r?.released)extra=`<div class="output-text">${escapeHTML(r.released.text)}</div>`;else if(r?.operation==='use')extra='<div class="info warn">条件不成立のため、情報本体の供給はありません。</div>';
+if(r?.certificate){const c=r.certificate;extra+=`<div class="info good"><b>範囲：${escapeHTML(c.scope)} ／ 起源：${escapeHTML(c.origin)} ／ 状態版：${c.state_version}</b><br>監査用の合成情報・記録は保持します。物理消去の証明ではありません。${c.excluded_routes.length?'<br><b>範囲外・終了未確認：'+escapeHTML(c.excluded_routes.join(', '))+'</b>':''}</div>`;}
+if(['remote_copy','route_restore','inventory_drop','route_unknown'].includes(r?.operation))extra+='<div class="info warn">これは異常状態を作る試験操作です。通常の許可された利用や実際の外部送信ではありません。</div>';
+$('result-extra').innerHTML=extra;
+const kindNames={source:'元情報',summary:'要約',copy:'コピー','late-copy':'遅延出力','external-fixture':'管理外コピー'};
+$('objects').innerHTML=Object.values(state.objects).map(obj=>{const ps=Object.values(state.paths).filter(p=>p.object===obj.id),frozen=obj.origins.some(o=>state.frozen.includes(o)),closed=ps.every(p=>!Lifecycle.possible(p));const label=ps.some(p=>p.domain==='remote')?'管理外・未確認':closed?'経路閉鎖':frozen?'新規利用停止':'管理下で利用';return `<div class="object"><div class="obj-head"><span class="obj-title">${escapeHTML(obj.id)} <span class="state-badge">${kindNames[obj.kind]||obj.kind}</span></span><span class="key">v${obj.revision}</span></div><div class="obj-body"><div class="origin">${escapeHTML(obj.origins.join(' + '))}${obj.parents.length?' ← '+escapeHTML(obj.parents.join(' + ')):''}</div>${obj.conditions.map(t=>`<div class="term ${t.kind==='purpose'&&t.value===3?'changed':''}"><em>${escapeHTML(t.origin)}</em>${escapeHTML(E.ref.labels[t.kind]?.[String(t.value)]||t.kind+':'+t.value)}</div>`).join('')}<div class="route"><span>${escapeHTML(label)}</span><span>${closed?'CLOSED':frozen?'STOP':'ROUTE'}</span></div></div></div>`;}).join('');
+$('origin-state').textContent='終了処理中の起源：'+(state.frozen.join(', ')||'なし')+' ／ 閉鎖記録：'+state.receipts.length+'件 ／ 起源 O-B だけの情報は O-A の停止の影響を受けません。';
+$('permission-preview').innerHTML=state.objects.S?[['相談・内部','consultation','internal'],['二次利用・内部','secondary','internal'],['二次利用・外部','secondary','external']].map(([name,p,d])=>`<span>Sの${name}：${badge(Lifecycle.worst(Lifecycle.useChecks(E.useObservation(state,'S','staff',p,d))))}</span>`).join(''):'';
+$('evidence-json').textContent=bundle?JSON.stringify({schema:bundle.payload.schema,record_sha256:bundle.sha256,events:ev.length,final_version:state.version,certificates:state.certificates,retention:bundle.payload.scope_note,provider:'mock',network_calls:0},null,2):'操作デモで処理を実行すると表示されます。';
+}
+function saveJSON(x,filename){const url=URL.createObjectURL(new Blob([JSON.stringify(x,null,2)],{type:'application/json;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2500);}
+function semanticTamper(b){const t=clone(b);t.payload.events[0].body.result.status=t.payload.events[0].body.result.status==='PASS'?'REJECT':'PASS';let previous=Lifecycle.digest({reference:REFERENCE_SHA256,initial:E.initial()});for(const e of t.payload.events){e.body.previous=previous;e.sha256=Lifecycle.digest(e.body);previous=e.sha256;}t.sha256=Lifecycle.digest(t.payload);return t;}
+function verifyRecord(b,label){try{const v=E.verify(b);$('verify-result').textContent=label+'\n'+(v.ok?'再検証成立：'+v.replay_events+'件の履歴・状態・結果が再計算と一致しました。\nこれは過去の記録の成立です。現在適用・発行者認証・物理消去とは異なります。':'再検証不成立：結論・履歴・状態が固定参照からの再計算と一致しません。');$('verify-result').style.color=v.ok?'var(--green)':'var(--red)';}catch(e){$('verify-result').textContent='再検証不成立：'+e.message;$('verify-result').style.color='var(--red)';}}
+async function runTests(){const b=$('test-run');b.disabled=true;$('test-status').textContent='RUNNING';await new Promise(r=>setTimeout(r,40));try{let matched=0,total=0,replay=0,tamper=0,rows=[];for(const sc of E.data.scenarios){const z=E.runCommands(sc.commands,sc.label),actual=z.payload.events.map(e=>e.body.result.status),n=actual.filter((v,i)=>v===sc.expected[i]).length;matched+=n;total+=actual.length;const v=E.verify(z).ok;const t=!E.verify(semanticTamper(z)).ok;replay+=Number(v);tamper+=Number(t);rows.push(`<tr><td class="key">${escapeHTML(sc.key)}</td><td>${escapeHTML(sc.label)}</td><td>${n}/${actual.length}</td><td>${v?'成立':'不成立'}</td><td>${t?'検出':'失敗'}</td></tr>`);}$('test-steps').textContent=matched+'/'+total;$('test-steps').nextElementSibling.textContent='ブラウザ内で実行済み';$('test-replay').textContent=replay+'/'+E.data.scenarios.length;$('test-tamper').textContent=tamper+'/'+E.data.scenarios.length;$('test-body').innerHTML=rows.join('');$('test-status').textContent=matched===total&&replay===E.data.scenarios.length&&tamper===E.data.scenarios.length?'ALL CHECKS PASSED':'MISMATCH';}catch(e){error(e);$('test-status').textContent='ERROR';}finally{b.disabled=false;}}
+try{E=new Lifecycle.Engine(Lifecycle.parseJSON($('demo-data').textContent));state=E.initial();$('scenario-select').innerHTML=E.data.scenarios.map(s=>`<option value="${s.key}">${escapeHTML(s.label)}</option>`).join('');$('scenarios').addEventListener('click',e=>{const b=e.target.closest('[data-scenario]');if(b)selectScenario(b.dataset.scenario);});$('scenario-select').addEventListener('change',e=>selectScenario(e.target.value));$('next').onclick=()=>next();$('run-all').onclick=()=>next(true);$('reset').onclick=()=>selectScenario(selected);$('view-proof').onclick=()=>view('evidence');$('save').onclick=()=>{if(bundle){saveJSON(bundle,'lifecycle-'+selected+'-audit.json');toast('合成データを含む監査用記録を保存しました。');}};$('verify-current').onclick=()=>verifyRecord(bundle,'現在の記録');$('tamper').onclick=()=>verifyRecord(semanticTamper(bundle),'判定を改変し、連鎖と全ハッシュも再計算したコピー');$('load').onclick=()=>$('json-file').click();$('json-file').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{requireOK(f.size<=16*1024*1024,'JSONは16MB以下にしてください');verifyRecord(Lifecycle.parseJSON(await f.text()),f.name);}catch(err){$('verify-result').textContent='読み込み失敗：'+err.message;}finally{e.target.value='';}};$('test-run').onclick=runTests;document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>view(b.dataset.tab));document.querySelector('.tabs').addEventListener('keydown',e=>{const bs=[...document.querySelectorAll('[data-tab]')],i=bs.indexOf(document.activeElement);if(i<0||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const j=e.key==='Home'?0:e.key==='End'?bs.length-1:(i+(e.key==='ArrowRight'?1:bs.length-1))%bs.length;bs[j].focus();view(bs[j].dataset.tab);});render();view('demo');document.body.dataset.ready='true';globalThis.LifecycleUI={selectScenario,next,view,getState:()=>state,getBundle:()=>bundle,runTests,semanticTamper};}catch(e){error(e);}
+
+</script>
+</body></html>
