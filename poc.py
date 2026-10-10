@@ -753,15 +753,30 @@ def proof_groups(engine: Engine, samples: list[tuple[dict,dict,dict,dict]]):
             else:
                 checks,decision={'U':('useChecks','useDecision'),'G':('grantChecks','grantDecision'),'E':('endChecks','endDecision')}[kind]
                 expected=lean_statuses([x['status'] for x in r['checks']])
-                goal('matches_'+str(i),f'({checks} {name}, {decision} {name}) = ({expected}, Status.{r["status"]})')
-                # Every operational release/certificate is additionally checked against the modeled gate.
-                if kind=='U':goal('release_'+str(i),f'useAction ({decision} {name}) = Action.'+('managedRead' if r['released'] else 'none'))
-                if kind=='E':goal('certificate_'+str(i),f'endAction ({decision} {name}) = Action.'+('scopedEndRecord' if r['certificate'] else 'none'))
-                goal('replay_'+str(i),f'replayCheck ({decision} {name}) Status.{r["status"]} true = true')
-                wrong='HOLD' if r['status']=='PASS' else 'PASS'
-                goal('wrong_replay_'+str(i),f'replayCheck ({decision} {name}) Status.{wrong} true = false')
+                final_decision=f'{decision} {name}'
                 if kind=='G':
-                    obj=s['objects'].get(c['target']);out=after['objects'].get(c['target'])
+                    # The evidence gate can HOLD when a grant is missing, while the
+                    # operation itself must REJECT changes to a frozen origin.
+                    # Model this separate pre-operation guard; never relabel a
+                    # missing proof as present or suppress a conformance case.
+                    obj=s['objects'].get(c['target'])
+                    frozen=bool(obj and any(origin in s['frozen'] for origin in obj['origins']))
+                    guard='true' if frozen else 'false'
+                    final_decision=f'worst ((if {guard} then [Status.REJECT] else []) ++ {checks} {name})'
+                    evidence_decision=worst([x['status'] for x in r['checks']])
+                    goal('matches_'+str(i),
+                         f'({checks} {name}, {decision} {name}, {final_decision}) = '
+                         f'({expected}, Status.{evidence_decision}, Status.{r["status"]})')
+                else:
+                    goal('matches_'+str(i),f'({checks} {name}, {final_decision}) = ({expected}, Status.{r["status"]})')
+                # Every operational release/certificate is additionally checked against the modeled gate.
+                if kind=='U':goal('release_'+str(i),f'useAction ({final_decision}) = Action.'+('managedRead' if r['released'] else 'none'))
+                if kind=='E':goal('certificate_'+str(i),f'endAction ({final_decision}) = Action.'+('scopedEndRecord' if r['certificate'] else 'none'))
+                goal('replay_'+str(i),f'replayCheck ({final_decision}) Status.{r["status"]} true = true')
+                wrong='HOLD' if r['status']=='PASS' else 'PASS'
+                goal('wrong_replay_'+str(i),f'replayCheck ({final_decision}) Status.{wrong} true = false')
+                if kind=='G':
+                    out=after['objects'].get(c['target'])
                     if obj and out:
                         target='{ origin := 1, kind := 0, value := 1 }'
                         goal('amend_'+str(i),f'amendAll ({lean_terms(obj["conditions"])}) ({target}) 3 {name} = ({lean_terms(out["conditions"])})')
