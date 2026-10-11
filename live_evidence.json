@@ -1,0 +1,1328 @@
+{
+  "payload": {
+    "schema": "civic-lifecycle-live/1.0",
+    "reference_hash": "e385c4c4379207b92355a2621f14422e4337e20fe4b2c7ba6f2407245f5a0add",
+    "created_at_utc": "2026-10-11T02:48:54.148125+00:00",
+    "endpoint": "https://api.openai.com/v1/responses",
+    "model": "gpt-5.4-mini",
+    "store": false,
+    "synthetic_preflight": {
+      "synthetic_fixture": "A-only",
+      "synthetic_external_review": true,
+      "sent_source_id": "A",
+      "sent_source_sha256": "3eaf35275992bc633f6cad57438426f0603109ff677d4aeca40606796252da46",
+      "excluded_source_id": "B",
+      "excluded_source_sha256": "4788c5fc89a2804a710d2cc970246e69827b57cac9bee7b9c8f987d6e7e56ba2",
+      "purpose": "limited_synthetic_api_evaluation",
+      "recipient": "https://api.openai.com/v1/responses",
+      "real_resident_data": false,
+      "automated_external_output_release": false,
+      "provider_scope_confirmed": false,
+      "store_requested": false
+    },
+    "request": {
+      "request_id": "derive-1",
+      "input_objects": [
+        "A"
+      ],
+      "input_digests": [
+        "3eaf35275992bc633f6cad57438426f0603109ff677d4aeca40606796252da46"
+      ],
+      "texts": [
+        "【架空相談A】子育てと就労の両立について、利用できる相談窓口を知りたい。年代は30代、世帯区分は子育て世帯。"
+      ],
+      "mode": "normal"
+    },
+    "provider_response": {
+      "request_id": "derive-1",
+      "provider": "openai",
+      "outcome": "completed",
+      "text": "子育て世帯（30代）から、子育てと就労の両立に関して利用できる相談窓口を知りたいとの相談。",
+      "claimed_conditions": null,
+      "model": "gpt-5.4-mini-2026-03-17",
+      "response_id": "resp_0279f25a569f14ab016acaf914c8bc87d0bcbb7ade3c1ad4bb",
+      "client_request_id": "civic-lifecycle-869ee57aadcf4d7eb08437dfa3ba83a0",
+      "store_requested": false,
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 43
+      }
+    },
+    "local_trace": {
+      "payload": {
+        "schema": "civic-lifecycle-evidence/1.0",
+        "reference_hash": "e385c4c4379207b92355a2621f14422e4337e20fe4b2c7ba6f2407245f5a0add",
+        "label": "real-openai-synthetic-source-A",
+        "events": [
+          {
+            "body": {
+              "sequence": 1,
+              "previous": "cbceb447db6bae5bb0780f7c5d4b75bf0d40ea0d4197a382ad327dcea343391e",
+              "command": {
+                "op": "use",
+                "actor": "staff",
+                "target": "B",
+                "purpose": "consultation",
+                "recipient": "external"
+              },
+              "before_state": "3880bb85c589f85cee31ed366dfe6a8045203e03b17fe28c11ad2351b1e4d397",
+              "after_state": "3880bb85c589f85cee31ed366dfe6a8045203e03b17fe28c11ad2351b1e4d397",
+              "result": {
+                "operation": "use",
+                "status": "REJECT",
+                "reason": "条件を満たさないため、情報本体は供給しません。",
+                "checks": [
+                  {
+                    "id": "U01",
+                    "label": "対象の存在",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U02",
+                    "label": "登録一覧との対応",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U03",
+                    "label": "操作権限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U04",
+                    "label": "起源別の利用目的",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U05",
+                    "label": "送信先・提供先",
+                    "status": "REJECT"
+                  },
+                  {
+                    "id": "U06",
+                    "label": "利用期限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U07",
+                    "label": "起源の終了状態",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U08",
+                    "label": "実際の管理経路",
+                    "status": "PASS"
+                  }
+                ],
+                "observation": {
+                  "model": "U",
+                  "input": {
+                    "present": true,
+                    "inventoryKnown": true,
+                    "inventoryOK": true,
+                    "authorityKnown": true,
+                    "authorityOK": true,
+                    "conditionsKnown": true,
+                    "purposeOK": true,
+                    "recipientOK": false,
+                    "deadlineOK": true,
+                    "active": true,
+                    "paths": [
+                      {
+                        "enabled": 1,
+                        "reader": 1
+                      }
+                    ]
+                  }
+                },
+                "released": null,
+                "certificate": null,
+                "mutation": false,
+                "before_version": 0,
+                "after_version": 0
+              }
+            },
+            "sha256": "820dc79fcf6e3bba0b9328110bddecacd8ee98d1393f47693891880d25deab9f"
+          },
+          {
+            "body": {
+              "sequence": 2,
+              "previous": "820dc79fcf6e3bba0b9328110bddecacd8ee98d1393f47693891880d25deab9f",
+              "command": {
+                "op": "derive",
+                "actor": "staff",
+                "parents": [
+                  "A"
+                ],
+                "target": "S",
+                "support": "unknown",
+                "mode": "normal"
+              },
+              "before_state": "3880bb85c589f85cee31ed366dfe6a8045203e03b17fe28c11ad2351b1e4d397",
+              "after_state": "83f6cf9da549d300c9ab0d3a1ddbeb56ca17ff68c3c64e3b2b5edba86cd407ad",
+              "result": {
+                "operation": "derive",
+                "status": "PASS",
+                "reason": "出力本体・起源・承継条件・利用経路を同じ状態更新で登録しました。",
+                "checks": [
+                  {
+                    "id": "INPUT-A",
+                    "label": "入力 A の利用条件",
+                    "status": "PASS"
+                  }
+                ],
+                "observation": null,
+                "released": null,
+                "certificate": null,
+                "mutation": true,
+                "before_version": 0,
+                "after_version": 1,
+                "provider_receipt": {
+                  "request_digest": "252fba3a887584818897efb3b5c67997bcbed1f8fd28d3e2d2046bf50493c89d",
+                  "response_digest": "0c4dc6b0137fb73a0bcc38e2a3805c676c4e90bd163c25e370abfb9c9f8b1c15",
+                  "provider": "openai",
+                  "policy_from_provider_accepted": false
+                }
+              }
+            },
+            "sha256": "3871181dfc0f126774f01714b3cf268cba441258a2a5acacb5b62d2a2212f107"
+          },
+          {
+            "body": {
+              "sequence": 3,
+              "previous": "3871181dfc0f126774f01714b3cf268cba441258a2a5acacb5b62d2a2212f107",
+              "command": {
+                "op": "use",
+                "actor": "staff",
+                "target": "S",
+                "purpose": "secondary",
+                "recipient": "internal"
+              },
+              "before_state": "83f6cf9da549d300c9ab0d3a1ddbeb56ca17ff68c3c64e3b2b5edba86cd407ad",
+              "after_state": "83f6cf9da549d300c9ab0d3a1ddbeb56ca17ff68c3c64e3b2b5edba86cd407ad",
+              "result": {
+                "operation": "use",
+                "status": "REJECT",
+                "reason": "条件を満たさないため、情報本体は供給しません。",
+                "checks": [
+                  {
+                    "id": "U01",
+                    "label": "対象の存在",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U02",
+                    "label": "登録一覧との対応",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U03",
+                    "label": "操作権限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U04",
+                    "label": "起源別の利用目的",
+                    "status": "REJECT"
+                  },
+                  {
+                    "id": "U05",
+                    "label": "送信先・提供先",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U06",
+                    "label": "利用期限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U07",
+                    "label": "起源の終了状態",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U08",
+                    "label": "実際の管理経路",
+                    "status": "PASS"
+                  }
+                ],
+                "observation": {
+                  "model": "U",
+                  "input": {
+                    "present": true,
+                    "inventoryKnown": true,
+                    "inventoryOK": true,
+                    "authorityKnown": true,
+                    "authorityOK": true,
+                    "conditionsKnown": true,
+                    "purposeOK": false,
+                    "recipientOK": true,
+                    "deadlineOK": true,
+                    "active": true,
+                    "paths": [
+                      {
+                        "enabled": 1,
+                        "reader": 1
+                      }
+                    ]
+                  }
+                },
+                "released": null,
+                "certificate": null,
+                "mutation": false,
+                "before_version": 1,
+                "after_version": 1
+              }
+            },
+            "sha256": "f5e28b4a274c4c5bb881e14a404e517608183832ac508f789918e398d0695540"
+          },
+          {
+            "body": {
+              "sequence": 4,
+              "previous": "f5e28b4a274c4c5bb881e14a404e517608183832ac508f789918e398d0695540",
+              "command": {
+                "op": "use",
+                "actor": "staff",
+                "target": "S",
+                "purpose": "consultation",
+                "recipient": "internal"
+              },
+              "before_state": "83f6cf9da549d300c9ab0d3a1ddbeb56ca17ff68c3c64e3b2b5edba86cd407ad",
+              "after_state": "83f6cf9da549d300c9ab0d3a1ddbeb56ca17ff68c3c64e3b2b5edba86cd407ad",
+              "result": {
+                "operation": "use",
+                "status": "PASS",
+                "reason": "指定した目的・提供先で職員確認用の情報を供給しました。",
+                "checks": [
+                  {
+                    "id": "U01",
+                    "label": "対象の存在",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U02",
+                    "label": "登録一覧との対応",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U03",
+                    "label": "操作権限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U04",
+                    "label": "起源別の利用目的",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U05",
+                    "label": "送信先・提供先",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U06",
+                    "label": "利用期限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U07",
+                    "label": "起源の終了状態",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U08",
+                    "label": "実際の管理経路",
+                    "status": "PASS"
+                  }
+                ],
+                "observation": {
+                  "model": "U",
+                  "input": {
+                    "present": true,
+                    "inventoryKnown": true,
+                    "inventoryOK": true,
+                    "authorityKnown": true,
+                    "authorityOK": true,
+                    "conditionsKnown": true,
+                    "purposeOK": true,
+                    "recipientOK": true,
+                    "deadlineOK": true,
+                    "active": true,
+                    "paths": [
+                      {
+                        "enabled": 1,
+                        "reader": 1
+                      }
+                    ]
+                  }
+                },
+                "released": {
+                  "object": "S",
+                  "text": "子育て世帯（30代）から、子育てと就労の両立に関して利用できる相談窓口を知りたいとの相談。",
+                  "purpose": "consultation",
+                  "recipient": "internal"
+                },
+                "certificate": null,
+                "mutation": false,
+                "before_version": 1,
+                "after_version": 1
+              }
+            },
+            "sha256": "516784179f2a5c3926ee8ef5ca355d25a78f84aa1d65e6909f324f76ea7429b0"
+          },
+          {
+            "body": {
+              "sequence": 5,
+              "previous": "516784179f2a5c3926ee8ef5ca355d25a78f84aa1d65e6909f324f76ea7429b0",
+              "command": {
+                "op": "approve",
+                "actor": "reviewer",
+                "target": "S",
+                "approval": "G1"
+              },
+              "before_state": "83f6cf9da549d300c9ab0d3a1ddbeb56ca17ff68c3c64e3b2b5edba86cd407ad",
+              "after_state": "e25e9c7573743fcc71e9c59ccabca36c2300cb0ae7b5047c2a8bef4ac301f530",
+              "result": {
+                "operation": "approve",
+                "status": "PASS",
+                "reason": "模擬権限者の変更証拠を、対象・版・内容・変更前条件に結合しました。",
+                "checks": [],
+                "observation": null,
+                "released": null,
+                "certificate": null,
+                "mutation": true,
+                "before_version": 1,
+                "after_version": 2
+              }
+            },
+            "sha256": "289741d4932ed569edd1d8dc7780e0138e0a3a158f67720fd55503276b915b78"
+          },
+          {
+            "body": {
+              "sequence": 6,
+              "previous": "289741d4932ed569edd1d8dc7780e0138e0a3a158f67720fd55503276b915b78",
+              "command": {
+                "op": "amend",
+                "actor": "reviewer",
+                "target": "S",
+                "approval": "G1"
+              },
+              "before_state": "e25e9c7573743fcc71e9c59ccabca36c2300cb0ae7b5047c2a8bef4ac301f530",
+              "after_state": "8bac55408bce090caa0b24e7d2f45c743671b0b33585d7f154bcb276f99ef0aa",
+              "result": {
+                "operation": "amend",
+                "status": "PASS",
+                "reason": "対象出力の目的条件だけを変更。他の条件・別起源・元情報は変更していません。",
+                "checks": [
+                  {
+                    "id": "G01",
+                    "label": "変更権限の証拠",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "G02",
+                    "label": "出力・派生イベントとの結合",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "G03",
+                    "label": "変更前の条件・版との結合",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "G04",
+                    "label": "条件要素・利用文脈",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "G05",
+                    "label": "証拠の有効期間",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "G06",
+                    "label": "証拠の未使用性",
+                    "status": "PASS"
+                  }
+                ],
+                "observation": {
+                  "model": "G",
+                  "input": {
+                    "proofPresent": true,
+                    "authorityOK": true,
+                    "targetOK": true,
+                    "beforeOK": true,
+                    "contextOK": true,
+                    "timeOK": true,
+                    "unused": true
+                  }
+                },
+                "released": null,
+                "certificate": null,
+                "mutation": true,
+                "before_version": 2,
+                "after_version": 3
+              }
+            },
+            "sha256": "b049850fa8bab4ea7ba1460059334105b9896f0fa97ddb4f60e6ba8635c7df36"
+          },
+          {
+            "body": {
+              "sequence": 7,
+              "previous": "b049850fa8bab4ea7ba1460059334105b9896f0fa97ddb4f60e6ba8635c7df36",
+              "command": {
+                "op": "use",
+                "actor": "staff",
+                "target": "S",
+                "purpose": "secondary",
+                "recipient": "internal"
+              },
+              "before_state": "8bac55408bce090caa0b24e7d2f45c743671b0b33585d7f154bcb276f99ef0aa",
+              "after_state": "8bac55408bce090caa0b24e7d2f45c743671b0b33585d7f154bcb276f99ef0aa",
+              "result": {
+                "operation": "use",
+                "status": "PASS",
+                "reason": "指定した目的・提供先で職員確認用の情報を供給しました。",
+                "checks": [
+                  {
+                    "id": "U01",
+                    "label": "対象の存在",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U02",
+                    "label": "登録一覧との対応",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U03",
+                    "label": "操作権限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U04",
+                    "label": "起源別の利用目的",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U05",
+                    "label": "送信先・提供先",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U06",
+                    "label": "利用期限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U07",
+                    "label": "起源の終了状態",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U08",
+                    "label": "実際の管理経路",
+                    "status": "PASS"
+                  }
+                ],
+                "observation": {
+                  "model": "U",
+                  "input": {
+                    "present": true,
+                    "inventoryKnown": true,
+                    "inventoryOK": true,
+                    "authorityKnown": true,
+                    "authorityOK": true,
+                    "conditionsKnown": true,
+                    "purposeOK": true,
+                    "recipientOK": true,
+                    "deadlineOK": true,
+                    "active": true,
+                    "paths": [
+                      {
+                        "enabled": 1,
+                        "reader": 1
+                      }
+                    ]
+                  }
+                },
+                "released": {
+                  "object": "S",
+                  "text": "子育て世帯（30代）から、子育てと就労の両立に関して利用できる相談窓口を知りたいとの相談。",
+                  "purpose": "secondary",
+                  "recipient": "internal"
+                },
+                "certificate": null,
+                "mutation": false,
+                "before_version": 3,
+                "after_version": 3
+              }
+            },
+            "sha256": "bd9609925227102d484452bb17bced08735e3d5d119e220963feeafee91d5639"
+          },
+          {
+            "body": {
+              "sequence": 8,
+              "previous": "bd9609925227102d484452bb17bced08735e3d5d119e220963feeafee91d5639",
+              "command": {
+                "op": "copy",
+                "actor": "staff",
+                "source": "S",
+                "target": "C"
+              },
+              "before_state": "8bac55408bce090caa0b24e7d2f45c743671b0b33585d7f154bcb276f99ef0aa",
+              "after_state": "1ff9b428171850c41326b297f1703261ed5064d2ff4c6166abcfdd1083cae894",
+              "result": {
+                "operation": "copy",
+                "status": "PASS",
+                "reason": "出力本体・起源・承継条件・利用経路を同じ状態更新で登録しました。",
+                "checks": [
+                  {
+                    "id": "INPUT-S",
+                    "label": "入力 S の利用条件",
+                    "status": "PASS"
+                  }
+                ],
+                "observation": null,
+                "released": null,
+                "certificate": null,
+                "mutation": true,
+                "before_version": 3,
+                "after_version": 4
+              }
+            },
+            "sha256": "bb91a979b5a0858fe3744d86020487cdd4d6f1058df85601238250e92564b4b4"
+          },
+          {
+            "body": {
+              "sequence": 9,
+              "previous": "bb91a979b5a0858fe3744d86020487cdd4d6f1058df85601238250e92564b4b4",
+              "command": {
+                "op": "freeze",
+                "actor": "operator",
+                "origin": "O-A"
+              },
+              "before_state": "1ff9b428171850c41326b297f1703261ed5064d2ff4c6166abcfdd1083cae894",
+              "after_state": "824bb0d9f7701822baa615d04b2de652d3f2fe34ca02069a5c02820baf1b7a1d",
+              "result": {
+                "operation": "freeze",
+                "status": "PASS",
+                "reason": "当該起源の新規利用を停止しました。これだけでは既存経路の終了とは認めません。",
+                "checks": [],
+                "observation": null,
+                "released": null,
+                "certificate": null,
+                "mutation": true,
+                "before_version": 4,
+                "after_version": 5
+              }
+            },
+            "sha256": "c65613f2baae95889c538f360d8a8d5cb0258868da199b8a00847b21632bd7f0"
+          },
+          {
+            "body": {
+              "sequence": 10,
+              "previous": "c65613f2baae95889c538f360d8a8d5cb0258868da199b8a00847b21632bd7f0",
+              "command": {
+                "op": "close",
+                "actor": "operator",
+                "path": "A-read"
+              },
+              "before_state": "824bb0d9f7701822baa615d04b2de652d3f2fe34ca02069a5c02820baf1b7a1d",
+              "after_state": "07bd8cb33f3d6d94ead4fb3ffa9a2b1ab457f0306aa218ae13b68cc06b534e3c",
+              "result": {
+                "operation": "close",
+                "status": "PASS",
+                "reason": "管理ストアの読取り経路を無効化し、実際の前後状態を閉鎖記録に保存しました。",
+                "checks": [],
+                "observation": null,
+                "released": null,
+                "certificate": null,
+                "mutation": true,
+                "before_version": 5,
+                "after_version": 6
+              }
+            },
+            "sha256": "d76da4bf7ed45b80372ded1ab08317d1705251b630cac4aa6a68fad70d1b76e0"
+          },
+          {
+            "body": {
+              "sequence": 11,
+              "previous": "d76da4bf7ed45b80372ded1ab08317d1705251b630cac4aa6a68fad70d1b76e0",
+              "command": {
+                "op": "close",
+                "actor": "operator",
+                "path": "S-read"
+              },
+              "before_state": "07bd8cb33f3d6d94ead4fb3ffa9a2b1ab457f0306aa218ae13b68cc06b534e3c",
+              "after_state": "ba7e9f00b7d8a19c376c59c41b0822499083509f518ef365017e4571a71178e7",
+              "result": {
+                "operation": "close",
+                "status": "PASS",
+                "reason": "管理ストアの読取り経路を無効化し、実際の前後状態を閉鎖記録に保存しました。",
+                "checks": [],
+                "observation": null,
+                "released": null,
+                "certificate": null,
+                "mutation": true,
+                "before_version": 6,
+                "after_version": 7
+              }
+            },
+            "sha256": "db2ba1ec9e33f4ac89440a8ce65df51980dc4c0c0b725eaa10978573d5230e82"
+          },
+          {
+            "body": {
+              "sequence": 12,
+              "previous": "db2ba1ec9e33f4ac89440a8ce65df51980dc4c0c0b725eaa10978573d5230e82",
+              "command": {
+                "op": "certify",
+                "origin": "O-A",
+                "scope": "local-business",
+                "audit_exception": true,
+                "certificate": "T1"
+              },
+              "before_state": "ba7e9f00b7d8a19c376c59c41b0822499083509f518ef365017e4571a71178e7",
+              "after_state": "ba7e9f00b7d8a19c376c59c41b0822499083509f518ef365017e4571a71178e7",
+              "result": {
+                "operation": "certify",
+                "status": "REJECT",
+                "reason": "残存経路・不明事項・未終結操作等があるため、利用終了の証明は生成しません。",
+                "checks": [
+                  {
+                    "id": "E01",
+                    "label": "対象範囲・登録の完全性",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "E02",
+                    "label": "終了バリアの設定",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "E03",
+                    "label": "コピー等の残存利用経路",
+                    "status": "REJECT"
+                  },
+                  {
+                    "id": "E04",
+                    "label": "予約中・結果不明の操作",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "E05",
+                    "label": "閉鎖処理と状態差分の証拠",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "E06",
+                    "label": "監査保持例外の明示",
+                    "status": "PASS"
+                  }
+                ],
+                "observation": {
+                  "model": "E",
+                  "input": {
+                    "inventoryKnown": true,
+                    "inventoryOK": true,
+                    "frozen": true,
+                    "paths": [
+                      {
+                        "enabled": 0,
+                        "reader": 1
+                      },
+                      {
+                        "enabled": 0,
+                        "reader": 1
+                      },
+                      {
+                        "enabled": 1,
+                        "reader": 1
+                      }
+                    ],
+                    "pending": 0,
+                    "unknown": 0,
+                    "closureKnown": true,
+                    "closureOK": true,
+                    "retainedBody": true,
+                    "auditException": true
+                  }
+                },
+                "released": null,
+                "certificate": null,
+                "mutation": false,
+                "before_version": 7,
+                "after_version": 7
+              }
+            },
+            "sha256": "79d5303174579d0536559b6e7e994ad3ca8295cfc91d0c370193982ae5a2e416"
+          },
+          {
+            "body": {
+              "sequence": 13,
+              "previous": "79d5303174579d0536559b6e7e994ad3ca8295cfc91d0c370193982ae5a2e416",
+              "command": {
+                "op": "close",
+                "actor": "operator",
+                "path": "C-read"
+              },
+              "before_state": "ba7e9f00b7d8a19c376c59c41b0822499083509f518ef365017e4571a71178e7",
+              "after_state": "4c51aeb2a3dfb873937c22a61c9055750f1220e190d82192b5aba835236a61fa",
+              "result": {
+                "operation": "close",
+                "status": "PASS",
+                "reason": "管理ストアの読取り経路を無効化し、実際の前後状態を閉鎖記録に保存しました。",
+                "checks": [],
+                "observation": null,
+                "released": null,
+                "certificate": null,
+                "mutation": true,
+                "before_version": 7,
+                "after_version": 8
+              }
+            },
+            "sha256": "be48f3e16c2533bb37fa3fa8270fd9f306ce93b8bcd5b32c0e2d12ab61d1968e"
+          },
+          {
+            "body": {
+              "sequence": 14,
+              "previous": "be48f3e16c2533bb37fa3fa8270fd9f306ce93b8bcd5b32c0e2d12ab61d1968e",
+              "command": {
+                "op": "certify",
+                "origin": "O-A",
+                "scope": "local-business",
+                "audit_exception": true,
+                "certificate": "T1"
+              },
+              "before_state": "4c51aeb2a3dfb873937c22a61c9055750f1220e190d82192b5aba835236a61fa",
+              "after_state": "4c51aeb2a3dfb873937c22a61c9055750f1220e190d82192b5aba835236a61fa",
+              "result": {
+                "operation": "certify",
+                "status": "PASS",
+                "reason": "指定した管理範囲の業務利用終了を確認しました。監査保持と範囲外を明示した証拠を生成しました。",
+                "checks": [
+                  {
+                    "id": "E01",
+                    "label": "対象範囲・登録の完全性",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "E02",
+                    "label": "終了バリアの設定",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "E03",
+                    "label": "コピー等の残存利用経路",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "E04",
+                    "label": "予約中・結果不明の操作",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "E05",
+                    "label": "閉鎖処理と状態差分の証拠",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "E06",
+                    "label": "監査保持例外の明示",
+                    "status": "PASS"
+                  }
+                ],
+                "observation": {
+                  "model": "E",
+                  "input": {
+                    "inventoryKnown": true,
+                    "inventoryOK": true,
+                    "frozen": true,
+                    "paths": [
+                      {
+                        "enabled": 0,
+                        "reader": 1
+                      },
+                      {
+                        "enabled": 0,
+                        "reader": 1
+                      },
+                      {
+                        "enabled": 0,
+                        "reader": 1
+                      }
+                    ],
+                    "pending": 0,
+                    "unknown": 0,
+                    "closureKnown": true,
+                    "closureOK": true,
+                    "retainedBody": true,
+                    "auditException": true
+                  }
+                },
+                "released": null,
+                "certificate": {
+                  "schema": "scoped-use-end/1.0",
+                  "origin": "O-A",
+                  "scope": "local-business",
+                  "operations": [
+                    "managed_read"
+                  ],
+                  "state_version": 8,
+                  "epoch": 1,
+                  "state_hash": "4c51aeb2a3dfb873937c22a61c9055750f1220e190d82192b5aba835236a61fa",
+                  "reference_hash": "e385c4c4379207b92355a2621f14422e4337e20fe4b2c7ba6f2407245f5a0add",
+                  "issued": 1,
+                  "expires": 4,
+                  "retention_exception": "synthetic-audit-only",
+                  "excluded_routes": [],
+                  "physical_erasure": false,
+                  "provider_internal_deletion": false
+                },
+                "mutation": false,
+                "before_version": 8,
+                "after_version": 8
+              }
+            },
+            "sha256": "10d44815c8bb54074da9f69eb996f8a1f47de1a82bb67a34a4f58cc65b8c805b"
+          },
+          {
+            "body": {
+              "sequence": 15,
+              "previous": "10d44815c8bb54074da9f69eb996f8a1f47de1a82bb67a34a4f58cc65b8c805b",
+              "command": {
+                "op": "apply_certificate",
+                "certificate": "T1"
+              },
+              "before_state": "4c51aeb2a3dfb873937c22a61c9055750f1220e190d82192b5aba835236a61fa",
+              "after_state": "4c51aeb2a3dfb873937c22a61c9055750f1220e190d82192b5aba835236a61fa",
+              "result": {
+                "operation": "apply_certificate",
+                "status": "PASS",
+                "reason": "証明の対象状態と現在状態の一致を確認しました。読取り再開の許可ではありません。",
+                "checks": [],
+                "observation": {
+                  "model": "C",
+                  "input": {
+                    "historicalOK": true,
+                    "sameState": true,
+                    "sameScope": true,
+                    "withinTime": true,
+                    "savedVersion": 8,
+                    "liveVersion": 8,
+                    "savedEpoch": 1,
+                    "liveEpoch": 1,
+                    "termination": {
+                      "inventoryKnown": true,
+                      "inventoryOK": true,
+                      "frozen": true,
+                      "paths": [
+                        {
+                          "enabled": 0,
+                          "reader": 1
+                        },
+                        {
+                          "enabled": 0,
+                          "reader": 1
+                        },
+                        {
+                          "enabled": 0,
+                          "reader": 1
+                        }
+                      ],
+                      "pending": 0,
+                      "unknown": 0,
+                      "closureKnown": true,
+                      "closureOK": true,
+                      "retainedBody": true,
+                      "auditException": true
+                    }
+                  }
+                },
+                "released": null,
+                "certificate": null,
+                "mutation": false,
+                "before_version": 8,
+                "after_version": 8
+              }
+            },
+            "sha256": "5c04a6d2ead9b6b9f6cb0d885636b2cee408f48ae8a72119c2d44cb01bad3634"
+          },
+          {
+            "body": {
+              "sequence": 16,
+              "previous": "5c04a6d2ead9b6b9f6cb0d885636b2cee408f48ae8a72119c2d44cb01bad3634",
+              "command": {
+                "op": "use",
+                "actor": "staff",
+                "target": "S",
+                "purpose": "consultation",
+                "recipient": "internal"
+              },
+              "before_state": "4c51aeb2a3dfb873937c22a61c9055750f1220e190d82192b5aba835236a61fa",
+              "after_state": "4c51aeb2a3dfb873937c22a61c9055750f1220e190d82192b5aba835236a61fa",
+              "result": {
+                "operation": "use",
+                "status": "REJECT",
+                "reason": "条件を満たさないため、情報本体は供給しません。",
+                "checks": [
+                  {
+                    "id": "U01",
+                    "label": "対象の存在",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U02",
+                    "label": "登録一覧との対応",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U03",
+                    "label": "操作権限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U04",
+                    "label": "起源別の利用目的",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U05",
+                    "label": "送信先・提供先",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U06",
+                    "label": "利用期限",
+                    "status": "PASS"
+                  },
+                  {
+                    "id": "U07",
+                    "label": "起源の終了状態",
+                    "status": "REJECT"
+                  },
+                  {
+                    "id": "U08",
+                    "label": "実際の管理経路",
+                    "status": "REJECT"
+                  }
+                ],
+                "observation": {
+                  "model": "U",
+                  "input": {
+                    "present": true,
+                    "inventoryKnown": true,
+                    "inventoryOK": true,
+                    "authorityKnown": true,
+                    "authorityOK": true,
+                    "conditionsKnown": true,
+                    "purposeOK": true,
+                    "recipientOK": true,
+                    "deadlineOK": true,
+                    "active": false,
+                    "paths": [
+                      {
+                        "enabled": 0,
+                        "reader": 1
+                      }
+                    ]
+                  }
+                },
+                "released": null,
+                "certificate": null,
+                "mutation": false,
+                "before_version": 8,
+                "after_version": 8
+              }
+            },
+            "sha256": "e5fc6d9164bc7d9a2d11e4998e48dc1d8553e5a31a539ed13a541d5375739a0d"
+          }
+        ],
+        "final_state": {
+          "version": 8,
+          "clock": 1,
+          "epochs": {
+            "O-A": 1,
+            "O-B": 0
+          },
+          "frozen": [
+            "O-A"
+          ],
+          "objects": {
+            "A": {
+              "id": "A",
+              "parents": [],
+              "origins": [
+                "O-A"
+              ],
+              "conditions": [
+                {
+                  "kind": "audit",
+                  "origin": "O-A",
+                  "value": 1
+                },
+                {
+                  "kind": "deadline",
+                  "origin": "O-A",
+                  "value": 10
+                },
+                {
+                  "kind": "purpose",
+                  "origin": "O-A",
+                  "value": 1
+                }
+              ],
+              "text": "【架空相談A】子育てと就労の両立について、利用できる相談窓口を知りたい。年代は30代、世帯区分は子育て世帯。",
+              "kind": "source",
+              "domain": "local",
+              "revision": 1,
+              "event": "initial"
+            },
+            "B": {
+              "id": "B",
+              "parents": [],
+              "origins": [
+                "O-B"
+              ],
+              "conditions": [
+                {
+                  "kind": "audit",
+                  "origin": "O-B",
+                  "value": 1
+                },
+                {
+                  "kind": "recipient",
+                  "origin": "O-B",
+                  "value": 1
+                }
+              ],
+              "text": "【架空業務資料B】子育て相談と就労支援の窓口へ案内する。資料と派生文は庁内の職員確認用に限る。",
+              "kind": "source",
+              "domain": "local",
+              "revision": 1,
+              "event": "initial"
+            },
+            "S": {
+              "id": "S",
+              "parents": [
+                "A"
+              ],
+              "origins": [
+                "O-A"
+              ],
+              "conditions": [
+                {
+                  "kind": "audit",
+                  "origin": "O-A",
+                  "value": 1
+                },
+                {
+                  "kind": "deadline",
+                  "origin": "O-A",
+                  "value": 10
+                },
+                {
+                  "kind": "purpose",
+                  "origin": "O-A",
+                  "value": 3
+                }
+              ],
+              "text": "子育て世帯（30代）から、子育てと就労の両立に関して利用できる相談窓口を知りたいとの相談。",
+              "kind": "summary",
+              "domain": "local",
+              "revision": 2,
+              "event": "derive-1"
+            },
+            "C": {
+              "id": "C",
+              "parents": [
+                "S"
+              ],
+              "origins": [
+                "O-A"
+              ],
+              "conditions": [
+                {
+                  "kind": "audit",
+                  "origin": "O-A",
+                  "value": 1
+                },
+                {
+                  "kind": "deadline",
+                  "origin": "O-A",
+                  "value": 10
+                },
+                {
+                  "kind": "purpose",
+                  "origin": "O-A",
+                  "value": 3
+                }
+              ],
+              "text": "子育て世帯（30代）から、子育てと就労の両立に関して利用できる相談窓口を知りたいとの相談。",
+              "kind": "copy",
+              "domain": "local",
+              "revision": 1,
+              "event": "derive-4"
+            }
+          },
+          "paths": {
+            "A-read": {
+              "id": "A-read",
+              "object": "A",
+              "domain": "local",
+              "enabled": 0,
+              "reader": 1,
+              "generation": 0
+            },
+            "B-read": {
+              "id": "B-read",
+              "object": "B",
+              "domain": "local",
+              "enabled": 1,
+              "reader": 1,
+              "generation": 0
+            },
+            "S-read": {
+              "id": "S-read",
+              "object": "S",
+              "domain": "local",
+              "enabled": 0,
+              "reader": 1,
+              "generation": 0
+            },
+            "C-read": {
+              "id": "C-read",
+              "object": "C",
+              "domain": "local",
+              "enabled": 0,
+              "reader": 1,
+              "generation": 0
+            }
+          },
+          "inventory": [
+            "A-read",
+            "B-read",
+            "C-read",
+            "S-read"
+          ],
+          "operations": {},
+          "approvals": {
+            "G1": {
+              "issuer": "reviewer",
+              "target": "S",
+              "event": "derive-1",
+              "revision": 1,
+              "content": "c856eff5b5f40bb178433b289d0965abb386b1e2c02cb4c9e360dd0affbc0108",
+              "conditions": "54f59f4aefa36d21e1bc70740b29b4f2bfbbb9b4f1abfd90eef7328ae000bcf5",
+              "change": {
+                "origin": "O-A",
+                "kind": "purpose",
+                "from": 1,
+                "to": 3,
+                "purpose": "secondary",
+                "recipient": "internal",
+                "ttl": 3
+              },
+              "issued": 1,
+              "expires": 4,
+              "used": true
+            }
+          },
+          "receipts": [
+            {
+              "path": "A-read",
+              "before": {
+                "id": "A-read",
+                "object": "A",
+                "domain": "local",
+                "enabled": 1,
+                "reader": 1,
+                "generation": 0
+              },
+              "after": {
+                "id": "A-read",
+                "object": "A",
+                "domain": "local",
+                "enabled": 0,
+                "reader": 1,
+                "generation": 0
+              },
+              "version": 6,
+              "method": "managed-route-disable"
+            },
+            {
+              "path": "S-read",
+              "before": {
+                "id": "S-read",
+                "object": "S",
+                "domain": "local",
+                "enabled": 1,
+                "reader": 1,
+                "generation": 0
+              },
+              "after": {
+                "id": "S-read",
+                "object": "S",
+                "domain": "local",
+                "enabled": 0,
+                "reader": 1,
+                "generation": 0
+              },
+              "version": 7,
+              "method": "managed-route-disable"
+            },
+            {
+              "path": "C-read",
+              "before": {
+                "id": "C-read",
+                "object": "C",
+                "domain": "local",
+                "enabled": 1,
+                "reader": 1,
+                "generation": 0
+              },
+              "after": {
+                "id": "C-read",
+                "object": "C",
+                "domain": "local",
+                "enabled": 0,
+                "reader": 1,
+                "generation": 0
+              },
+              "version": 8,
+              "method": "managed-route-disable"
+            }
+          ],
+          "certificates": {
+            "T1": {
+              "schema": "scoped-use-end/1.0",
+              "origin": "O-A",
+              "scope": "local-business",
+              "operations": [
+                "managed_read"
+              ],
+              "state_version": 8,
+              "epoch": 1,
+              "state_hash": "4c51aeb2a3dfb873937c22a61c9055750f1220e190d82192b5aba835236a61fa",
+              "reference_hash": "e385c4c4379207b92355a2621f14422e4337e20fe4b2c7ba6f2407245f5a0add",
+              "issued": 1,
+              "expires": 4,
+              "retention_exception": "synthetic-audit-only",
+              "excluded_routes": [],
+              "physical_erasure": false,
+              "provider_internal_deletion": false
+            }
+          }
+        },
+        "scope_note": "監査用記録・合成入力は保持。証明対象は管理ゲート経由の業務利用のみ。",
+        "network_calls": 0,
+        "provider": "openai-recorded-replay"
+      },
+      "sha256": "0dfb19ecefac6c7913377f42ae5f5a36dc62bdf93a3a27c24a70722556aca698"
+    },
+    "network_calls": 1,
+    "provider_deletion_proven": false,
+    "usage_note": "Response token usage is provider-reported; actual invoice may vary.",
+    "privacy_boundary": "Only controlled local business-use gates are terminated."
+  },
+  "sha256": "b5e197077a042e34005f4cbc614314557c24c5c28abd09e66af7f4ffd61e3cd0"
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "civic-live-intent/1.0",
+  "status": "completed_locally_verified",
+  "created_at_utc": "2026-10-11T02:48:51.855356+00:00",
+  "model": "gpt-5.4-mini",
+  "endpoint": "https://api.openai.com/v1/responses",
+  "store": false,
+  "request_digest": "252fba3a887584818897efb3b5c67997bcbed1f8fd28d3e2d2046bf50493c89d",
+  "synthetic_preflight": {
+    "synthetic_fixture": "A-only",
+    "synthetic_external_review": true,
+    "sent_source_id": "A",
+    "sent_source_sha256": "3eaf35275992bc633f6cad57438426f0603109ff677d4aeca40606796252da46",
+    "excluded_source_id": "B",
+    "excluded_source_sha256": "4788c5fc89a2804a710d2cc970246e69827b57cac9bee7b9c8f987d6e7e56ba2",
+    "purpose": "limited_synthetic_api_evaluation",
+    "recipient": "https://api.openai.com/v1/responses",
+    "real_resident_data": false,
+    "automated_external_output_release": false,
+    "provider_scope_confirmed": false,
+    "store_requested": false
+  },
+  "cost_guard": {
+    "single_call_only": true,
+    "estimated_upper_input_tokens": 4791,
+    "max_output_tokens": 450,
+    "conservative_cost_usd": "0.005618",
+    "local_session_budget_usd": "0.50",
+    "note": "Model list-price estimate, not provider billing/total account spend hard-stop."
+  },
+  "note": "No automatic retry. On timeout/exceptions this intent remains unresolved.",
+  "response_id": "resp_0279f25a569f14ab016acaf914c8bc87d0bcbb7ade3c1ad4bb",
+  "client_request_id": "civic-lifecycle-869ee57aadcf4d7eb08437dfa3ba83a0",
+  "input_tokens": 144,
+  "output_tokens": 43,
+  "estimated_list_price_usd": "0.000302"
+}
