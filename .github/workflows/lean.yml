@@ -53,3 +53,51 @@ jobs:
         run: |
           set -euo pipefail
           python poc.py ci
+      - name: Verify published OpenAI API experiment evidence (offline)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python poc.py verify evidence/openai-api-2026-10-11/live_evidence.json
+          python - <<'PY'
+          from datetime import datetime
+          from pathlib import Path
+          import hashlib
+          import poc
+
+          folder = Path('evidence/openai-api-2026-10-11')
+          expected_sha256 = {
+              'api_intent.json': '6ad46cec536b90842132afa9e0af343acc284d2dda75649b356a5d6b1be5f58b',
+              'live_evidence.json': '323cbb3677cb09ed8f67f01bb2d23a191334f75125adf2f37eaca1ac4f10cb68',
+              'report.html': '28bb7db81cc9dbaa011360bc2b32d198a0f4e75d81f69678bf7eb4742c142381',
+          }
+          for name, expected in expected_sha256.items():
+              actual = hashlib.sha256((folder / name).read_bytes()).hexdigest()
+              if actual != expected:
+                  raise RuntimeError('Published evidence changed: ' + name)
+
+          intent = poc.read_json(folder / 'api_intent.json')
+          record = poc.read_json(folder / 'live_evidence.json')
+          payload = record['payload']
+          response = payload['provider_response']
+          engine = poc.Engine(poc.read_json(Path('cases.json')))
+          verification = poc.verify_live_record(engine, record)
+          assert verification['ok'] and verification['operations'] == 16
+          assert verification['local_scope_only'] and not verification['response_origin_attestation']
+          assert intent['status'] == 'completed_locally_verified'
+          assert intent['request_digest'] == poc.digest(payload['request'])
+          assert intent['synthetic_preflight'] == payload['synthetic_preflight']
+          assert intent['endpoint'] == payload['endpoint'] and intent['model'] == payload['model']
+          assert intent['store'] is False and payload['store'] is False
+          assert intent['response_id'] == response['response_id']
+          assert intent['client_request_id'] == response['client_request_id']
+          assert intent['input_tokens'] == response['usage']['input_tokens']
+          assert intent['output_tokens'] == response['usage']['output_tokens']
+          estimate = (response['usage']['input_tokens'] * poc.LIVE_PRICE_INPUT_PER_M
+                      + response['usage']['output_tokens'] * poc.LIVE_PRICE_OUTPUT_PER_M) / 1_000_000
+          assert intent['estimated_list_price_usd'] == format(estimate, '.6f')
+          assert datetime.fromisoformat(intent['created_at_utc']) <= datetime.fromisoformat(payload['created_at_utc'])
+          assert (folder / 'report.html').read_text(encoding='utf-8') == poc.live_html_report(record)
+          assert payload['network_calls'] == 1 and payload['provider_deletion_proven'] is False
+
+          print('Published API experiment: 3 original files SHA-256 OK; 16 local steps independently replayed; HTML/intent concordant. No OpenAI API call.')
+          PY
